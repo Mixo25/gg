@@ -11,7 +11,7 @@
         <link rel="icon" type="image/png" href="favicon.png">
         <link rel="apple-touch-icon" href="favicon.png">
         <link rel="shortcut icon" href="favicon.ico">
-
+		
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
@@ -27,6 +27,16 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+		
+		<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "url": "https://leanotumsprojects.com",
+  "logo": "https://leanotumsprojects.com/favicon_512.png",
+  "name": "Leanotums Projects (PTY) LTD"
+}
+</script>		
     </head>
 
     <body>
@@ -52,7 +62,7 @@
                                         </div>
                                         <div class="top-bar-text">
                                             <h3>Opening Hour</h3>
-                                            <p>Mon - Fri, 8:00 - 9:00</p>
+                                            <p>Mon - Fri, 8:00 - 17:00</p>
                                         </div>
                                     </div>
                                 </div>
@@ -102,16 +112,16 @@
                                 <a href="team.html" class="nav-item nav-link">Team</a>
                                 <a href="portfolio.html" class="nav-item nav-link">Project</a>
                                 <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
+                                    <a href="#" class="nav-link dropdown-toggle active" data-toggle="dropdown">Pages</a>
                                     <div class="dropdown-menu">
                                         <a href="blog.html" class="dropdown-item">Blog Page</a>
                                         
                                     </div>
                                 </div>
-                                <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                                <a href="contact.html" class="nav-item nav-link">Contact</a>
                             </div>
                             <div class="ml-auto">
-                               
+                                
                             </div>
                         </div>
                     </nav>
@@ -125,11 +135,11 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h2>Contact Us</h2>
+                            <h2>Our Blog</h2>
                         </div>
                         <div class="col-12">
                             <a href="">Home</a>
-                            <a href="">Contact Us</a>
+                            <a href="">Our Blog</a>
                         </div>
                     </div>
                 </div>
@@ -137,69 +147,78 @@
             <!-- Page Header End -->
 
 
-            <!-- Contact Start -->
-            <div class="contact wow fadeInUp">
+           <!-- Blog Start -->
+            <div class="blog">
                 <div class="container">
                     <div class="section-header text-center">
-                        <p>Get In Touch</p>
-                        <h2>For Any Query</h2>
+                        <p>Latest Blog</p>
+                        <h2>Latest From Our Blog</h2>
                     </div>
                     <div class="row">
-                        <div class="col-md-6">
-                            <div class="contact-info">
-                                <div class="contact-item">
-                                    <i class="flaticon-address"></i>
-                                    <div class="contact-text">
-                                        <h2>Location</h2>
-                                        <p>417 Nimmersat Street</p>
-                                    </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="blog-item">
+                                <div class="blog-img">
+                                    <img src="oo.jpg" alt="Image">
                                 </div>
-                                <div class="contact-item">
-                                    <i class="flaticon-call"></i>
-                                    <div class="contact-text">
-                                        <h2>Phone</h2>
-                                        <p>079 517 5383</p>
-                                    </div>
+                                <div class="blog-title">
+                                    <h3>Pretoria East. Office renovation</h3>
+                                    <a class="btn" href="">+</a>
                                 </div>
-                                <div class="contact-item">
-                                    <i class="flaticon-send-mail"></i>
-                                    <div class="contact-text">
-                                        <h2>Email</h2>
-                                        <p>Leanotumsprojects@gmail.com</p>
-                                    </div>
+                                <div class="blog-meta">
+                                    <p>By<a href="">Admin</a></p>
+                                    <p>In<a href="">Construction</a></p>
+                                </div>
+                                <div class="blog-text">
+                                    <p>
+                                       With meticulous attention to detail and a vision for modern functionality, we're reshaping workspaces into vibrant hubs of productivity and inspiration.
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="contact-form">
-                                <div id="success"></div>
-                                <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div>
-                                        <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
-                                    </div>
-                                </form>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp">
+                            <div class="blog-item">
+                                <div class="blog-img">
+                                    <img src="nn.jpg" alt="Image">
+                                </div>
+                                <div class="blog-title">
+                                    <h3>Plot 412 Zwavelpoort</h3>
+                                    <a class="btn" href="">+</a>
+                                </div>
+                                <div class="blog-meta">
+                                    <p>By<a href="">Admin</a></p>
+                                    <p>In<a href="">Construction</a></p>
+                                </div>
+                                <div class="blog-text">
+                                    <p>
+                                        Plot 412 Zwavelpoort offers comfortable and convenient accommodation for employees. Nestled in a tranquil setting, this accommodation provides a welcoming retreat after a day's work. 
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="blog-item">
+                                <div class="blog-img">
+                                    <img src="yy.jpg" alt="Image">
+                                </div>
+                                <div class="blog-title">
+                                    <h3>422A Danie Theron Street</h3>
+                                    <a class="btn" href="">+</a>
+                                </div>
+                                <div class="blog-meta">
+                                    <p>By<a href="">Admin</a></p>
+                                    <p>In<a href="">Construction</a></p>
+                                </div>
+                                <div class="blog-text">
+                                    <p>
+                                        422A Danie Theron Street, Pretoria North, offers a cozy retreat nestled in the heart of the vibrant Pretoria community. 
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- Contact End -->
+            <!-- Blog End -->
 
 
            <!-- Footer Start -->
@@ -294,10 +313,6 @@
         <script src="lib/waypoints/waypoints.min.js"></script>
         <script src="lib/counterup/counterup.min.js"></script>
         <script src="lib/slick/slick.min.js"></script>
-        
-        <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
