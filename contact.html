@@ -1,315 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Leanotumsprojects</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Construction, Builder, Building, Contractor, Construction Company, Construction Services, Renovation, Remodeling, Home Construction, Commercial Construction, Concrete Work, Roofing, Carpentry, Electrical, Plumbing, Painting, Landscaping, Interior Design, Architecture, Project Management, Johannesburg Construction, Gauteng Builders" name="keywords">
-        <meta content="Leanotumsprojects: Your trusted construction company offering building, renovation, and construction project services." name="description">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Leanotums Projects</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .contact-grid { display:grid; grid-template-columns:1fr 1.4fr; gap:60px; align-items:start; }
+    .contact-info-cards { display:flex; flex-direction:column; gap:2px; margin-top:40px; }
+    .contact-info-card { display:flex; align-items:center; gap:20px; padding:24px 28px; background:var(--bg3); border:1px solid var(--border); transition:border-color 0.3s; }
+    .contact-info-card:hover { border-color:rgba(95,158,160,0.4); }
+    .contact-icon { width:52px; height:52px; flex-shrink:0; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; color:var(--teal); font-size:18px; transition:border-color 0.3s,box-shadow 0.3s; }
+    .contact-info-card:hover .contact-icon { border-color:var(--teal); box-shadow:var(--glow-sm); }
+    .contact-info-card h4 { font-family:var(--ff-head); font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--teal); margin-bottom:4px; }
+    .contact-info-card p { font-size:15px; color:var(--text-dim); }
+    .hours-card { margin-top:2px; padding:28px; background:var(--bg3); border:1px solid var(--border); }
+    .hours-card h4 { font-family:var(--ff-head); font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--teal); margin-bottom:16px; }
+    .hours-row { display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--border); }
+    .hours-row:last-child { border-bottom:none; }
+    .hours-row span:first-child { font-family:var(--ff-head); font-size:14px; font-weight:600; color:var(--text-dim); }
+    .hours-row span:last-child { font-size:14px; color:var(--teal); }
+    .contact-form-wrap { padding:48px; background:var(--bg3); border:1px solid var(--border); }
+    .form-header { margin-bottom:36px; }
+    .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .form-group { margin-bottom:16px; }
+    .form-group label { display:block; font-family:var(--ff-head); font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--text-dim); margin-bottom:8px; }
+    .form-group input, .form-group textarea, .form-group select { width:100%; padding:14px 16px; background:var(--bg2); border:1px solid var(--border); color:var(--text); font-family:var(--ff-body); font-size:14px; outline:none; transition:border-color 0.3s; resize:vertical; }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color:var(--teal); }
+    .form-group textarea { min-height:140px; }
+    .form-group select option { background:var(--bg3); }
+    @media(max-width:900px){ .contact-grid{grid-template-columns:1fr;} .form-row{grid-template-columns:1fr;} }
+    @media(max-width:640px){ .contact-form-wrap{padding:28px;} }
+  </style>
+</head>
+<body>
+  <div id="cursor-dot"></div><div id="cursor-ring"></div>
+  <div id="scroll-progress"></div>
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">LEANO<span>TUMS</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="service.html">Services</a></li><li><a href="team.html">Team</a></li><li><a href="portfolio.html">Projects</a></li><li><a href="blog.html">Blog</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta active" style="background:var(--teal);color:var(--deep)">Contact Us</a>
+    <button class="nav-burger" id="burger"><span></span><span></span><span></span></button>
+  </nav>
+  <div id="mobile-menu"><a href="index.html" class="menu-link">Home</a><a href="about.html" class="menu-link">About</a><a href="service.html" class="menu-link">Services</a><a href="team.html" class="menu-link">Team</a><a href="portfolio.html" class="menu-link">Projects</a><a href="contact.html" class="menu-link">Contact</a><p class="menu-contact">079 517 5383 · Johannesburg</p></div>
 
-        <!-- FAVICON -->
-        <link rel="icon" type="image/png" href="favicon.png">
-        <link rel="apple-touch-icon" href="favicon.png">
-        <link rel="shortcut icon" href="favicon.ico">
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('66.jpg')"></div>
+    <div class="page-hero-overlay"></div><div class="page-hero-grid"></div>
+    <div class="container page-hero-content">
+      <div class="page-hero-tag">Get In Touch</div>
+      <h1><span>Contact</span> Us</h1>
+      <div class="breadcrumb-bar"><a href="index.html">Home</a><span>›</span><a href="contact.html">Contact</a></div>
+    </div>
+  </div>
 
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-        <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-        <link href="lib/slick/slick.css" rel="stylesheet">
-        <link href="lib/slick/slick-theme.css" rel="stylesheet">
-
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-		
-		<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "url": "https://leanotumsprojects.com",
-  "logo": "https://leanotumsprojects.com/favicon_512.png",
-  "name": "Leanotums Projects (PTY) LTD"
-}
-</script>		
-    </head>
-
-    <body>
-        <div class="wrapper">
-            <!-- Top Bar Start -->
-            <div class="top-bar">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4 col-md-12">
-                            <div class="logo">
-                                <a href="index.html">
-                                    <h1>Leanotums</h1>
-                                    <!-- <img src="img/logo.jpg" alt="Logo"> -->
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-7 d-none d-lg-block">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="top-bar-item">
-                                        <div class="top-bar-icon">
-                                            <i class="flaticon-calendar"></i>
-                                        </div>
-                                        <div class="top-bar-text">
-                                            <h3>Opening Hour</h3>
-                                            <p>Mon - Fri, 8:00 - 17:00</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="top-bar-item">
-                                        <div class="top-bar-icon">
-                                            <i class="flaticon-call"></i>
-                                        </div>
-                                        <div class="top-bar-text">
-                                            <h3>Call Us</h3>
-                                            <p>079 517 5383</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="top-bar-item">
-                                        <div class="top-bar-icon">
-                                            <i class="flaticon-send-mail"></i>
-                                        </div>
-                                        <div class="top-bar-text">
-                                            <h3>Email Us</h3>
-                                            <p>Leanotumsprojects@gmail.com</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Top Bar End -->
-
-            <!-- Nav Bar Start -->
-            <div class="nav-bar">
-                <div class="container-fluid">
-                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-                        <a href="#" class="navbar-brand">MENU</a>
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                            <div class="navbar-nav mr-auto">
-                                <a href="index.html" class="nav-item nav-link">Home</a>
-                                <a href="about.html" class="nav-item nav-link">About</a>
-                                <a href="service.html" class="nav-item nav-link">Service</a>
-                                <a href="team.html" class="nav-item nav-link">Team</a>
-                                <a href="portfolio.html" class="nav-item nav-link">Project</a>
-                                <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                                    <div class="dropdown-menu">
-                                        <a href="blog.html" class="dropdown-item">Blog Page</a>
-                                        
-                                    </div>
-                                </div>
-                                <a href="contact.html" class="nav-item nav-link active">Contact</a>
-                            </div>
-                            <div class="ml-auto">
-                               
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-            <!-- Nav Bar End -->
-            
-            
-            <!-- Page Header Start -->
-            <div class="page-header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2>Contact Us</h2>
-                        </div>
-                        <div class="col-12">
-                            <a href="">Home</a>
-                            <a href="">Contact Us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Page Header End -->
-
-
-            <!-- Contact Start -->
-            <div class="contact wow fadeInUp">
-                <div class="container">
-                    <div class="section-header text-center">
-                        <p>Get In Touch</p>
-                        <h2>For Any Query</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="contact-info">
-                                <div class="contact-item">
-                                    <i class="flaticon-address"></i>
-                                    <div class="contact-text">
-                                        <h2>Location</h2>
-                                        <p>417 Nimmersat Street</p>
-                                    </div>
-                                </div>
-                                <div class="contact-item">
-                                    <i class="flaticon-call"></i>
-                                    <div class="contact-text">
-                                        <h2>Phone</h2>
-                                        <p>079 517 5383</p>
-                                    </div>
-                                </div>
-                                <div class="contact-item">
-                                    <i class="flaticon-send-mail"></i>
-                                    <div class="contact-text">
-                                        <h2>Email</h2>
-                                        <p>Leanotumsprojects@gmail.com</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="contact-form">
-                                <div id="success"></div>
-                                <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div class="control-group">
-                                        <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
-                                        <p class="help-block text-danger"></p>
-                                    </div>
-                                    <div>
-                                        <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Contact End -->
-
-
-           <!-- Footer Start -->
-            <div class="footer wow fadeIn" data-wow-delay="0.3s">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-contact">
-                                <h2>Office Contact</h2>
-                                <p><i class="fa fa-map-marker-alt"></i>417 Nimmersat Street</p>
-                                <p><i class="fa fa-phone-alt"></i>079 517 5383</p>
-                                <p><i class="fa fa-envelope"></i>Leanotumsprojects@gmail.com</p>
-                                <div class="footer-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href="https://web.facebook.com/profile.php?id=61552090770281"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://www.youtube.com/watch?v=3CRRqdf6Gn4"><i class="fab fa-youtube"></i></a>
-                                    <a href="https://www.instagram.com/leanotumsprojects"><i class="fab fa-instagram"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-link">
-                                <h2>Services Areas</h2>
-                                <a href="">Building Construction</a>
-                                <a href="">House Renovation</a>
-                                <a href="">Architecture Design</a>
-                                <a href="">Interior Design</a>
-                                <a href="">Painting</a>
-                                <a href="">Landscape & Lawnwork</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-link">
-                                <h2>Useful Pages</h2>
-                                <a href="">About Us</a>
-                                <a href="">Contact Us</a>
-                                <a href="">Our Team</a>
-                                <a href="">Projects</a>
-                                <a href="">Testimonial</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="newsletter">
-                                <h2>Newsletter</h2>
-                                <p>
-                                   Stay updated with the latest industry trends, project highlights, expert tips, and exclusive offers. Be the first to know about upcoming events, new services, and innovative construction techniques. We value your interest and look forward to sharing valuable insights with you. If you have any questions or suggestions, feel free to reach out to us. Happy building!
-                                </p>
-                                <div class="form">
-                                    <input class="form-control" placeholder="Email here">
-                                    <button class="btn">Submit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container footer-menu">
-                    <div class="f-menu">
-                        <a href="">Terms of use</a>
-                        <a href="">Privacy policy</a>
-                        <a href="">Cookies</a>
-                        <a href="">Help</a>
-                        <a href="">FQAs</a>
-                    </div>
-                </div>
-                <div class="container copyright">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>&copy; <a href="#">Leanotumsprojects</a>, All Right Reserved.</p>
-                        </div>
-						
-						<!--/*** This template is free as long as you keep the footer author's credit link/attribution link/backlink. If you'd like to use the template without the footer author's credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        <div class="col-md-6">
-                            <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Footer End -->
-
-            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <section style="background:var(--bg)">
+    <div class="container">
+      <div class="contact-grid">
+        <div>
+          <div class="section-label reveal">Reach Out</div>
+          <h2 class="section-title reveal">Let's <span class="stroke">Talk</span></h2>
+          <p class="section-desc reveal">Have a project in mind or need a quote? Get in touch and our team will respond within 24 hours.</p>
+          <div class="contact-info-cards">
+            <div class="contact-info-card reveal"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div><h4>Location</h4><p>417 Nimmersat Street, Gauteng</p></div></div>
+            <div class="contact-info-card reveal" style="transition-delay:.1s"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><div><h4>Phone</h4><p>079 517 5383</p></div></div>
+            <div class="contact-info-card reveal" style="transition-delay:.2s"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div><h4>Email</h4><p>Leanotumsprojects@gmail.com</p></div></div>
+          </div>
+          <div class="hours-card reveal" style="transition-delay:.3s">
+            <h4>Office Hours</h4>
+            <div class="hours-row"><span>Monday – Friday</span><span>08:00 – 17:00</span></div>
+            <div class="hours-row"><span>Saturday</span><span>By Appointment</span></div>
+            <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
+          </div>
         </div>
+        <div class="contact-form-wrap reveal-right">
+          <div class="form-header">
+            <div class="section-label">Send A Message</div>
+            <h3 style="font-family:var(--ff-display);font-size:36px;letter-spacing:2px">For Any <span style="color:var(--teal)">Query</span></h3>
+          </div>
+          <form>
+            <div class="form-row">
+              <div class="form-group"><label>Your Name</label><input type="text" placeholder="e.g. John Smith"></div>
+              <div class="form-group"><label>Your Email</label><input type="email" placeholder="e.g. john@email.com"></div>
+            </div>
+            <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="e.g. 079 000 0000"></div>
+            <div class="form-group"><label>Service Required</label>
+              <select><option value="">Select a service...</option><option>Building Construction</option><option>House Renovation</option><option>Architecture Design</option><option>Interior Design</option><option>Fixing & Support</option><option>Painting</option><option>Garden Services & Landscaping</option><option>Other</option></select>
+            </div>
+            <div class="form-group"><label>Your Message</label><textarea placeholder="Tell us about your project..."></textarea></div>
+            <button type="submit" class="btn-primary" style="width:100%;text-align:center">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/slick/slick.min.js"></script>
-        
-        <!-- Contact Javascript File -->
-        <script src="mail/jqBootstrapValidation.min.js"></script>
-        <script src="mail/contact.js"></script>
+  <section class="cta-band"><div class="container"><div class="cta-inner"><div class="cta-text"><div class="section-label">Call Direct</div><h2>Speak to the<br>Team Now</h2></div><a href="tel:0795175383" class="btn-dark">079 517 5383</a></div></div></section>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
+  <footer id="footer"><div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="nav-logo">LEANO<span>TUMS</span></div><p>100% black-owned South African construction company delivering quality and reliability on every project.</p><div class="footer-social"><a href="#"><i class="fab fa-twitter"></i></a><a href="https://web.facebook.com/profile.php?id=61552090770281" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="https://www.youtube.com/watch?v=3CRRqdf6Gn4" target="_blank"><i class="fab fa-youtube"></i></a><a href="https://www.instagram.com/leanotumsprojects" target="_blank"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div></div>
+      <div class="footer-col"><h4>Services</h4><a href="service.html">Building Construction</a><a href="service.html">House Renovation</a><a href="service.html">Architecture Design</a><a href="service.html">Interior Design</a><a href="service.html">Painting</a><a href="service.html">Garden Services & Landscaping</a></div>
+      <div class="footer-col"><h4>Contact</h4><p><i class="fas fa-map-marker-alt"></i>417 Nimmersat Street, Gauteng</p><p><i class="fas fa-phone-alt"></i>079 517 5383</p><p><i class="fas fa-envelope"></i>Leanotumsprojects@gmail.com</p><p><i class="fas fa-clock"></i>Mon – Fri: 08:00 – 17:00</p></div>
+      <div class="footer-col"><h4>Newsletter</h4><p>Stay updated with project highlights and insights from our team.</p><div class="footer-newsletter" style="margin-top:16px"><input type="email" placeholder="Your email address"><button>Subscribe</button></div></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025 Leanotums Projects (PTY) LTD. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Cookies</a></div></div>
+  </div></footer>
+  <button id="back-top"><i class="fas fa-chevron-up"></i></button>
+  <script src="shared.js"></script>
+</body>
 </html>

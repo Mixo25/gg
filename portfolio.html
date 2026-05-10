@@ -1,372 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Leanotumsprojects</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Construction, Builder, Building, Contractor, Construction Company, Construction Services, Renovation, Remodeling, Home Construction, Commercial Construction, Concrete Work, Roofing, Carpentry, Electrical, Plumbing, Painting, Landscaping, Interior Design, Architecture, Project Management, Johannesburg Construction, Gauteng Builders" name="keywords">
-        <meta content="Leanotumsprojects: Your trusted construction company offering building, renovation, and construction project services." name="description">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Leanotums Projects</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .filter-bar { display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin:40px 0 36px; }
+    .filter-btn { font-family:var(--ff-head); font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:10px 24px; background:var(--bg3); border:1px solid var(--border); color:var(--text-dim); cursor:pointer; transition:all 0.3s; }
+    .filter-btn:hover, .filter-btn.active { background:var(--teal); color:var(--deep); border-color:var(--teal); }
+    .portfolio-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .portfolio-card { background:var(--bg3); border:1px solid var(--border); overflow:hidden; transition:border-color 0.3s,transform 0.3s,opacity 0.3s; }
+    .portfolio-card:hover { border-color:rgba(95,158,160,0.4); transform:translateY(-4px); }
+    .portfolio-img { overflow:hidden; height:240px; position:relative; }
+    .portfolio-img img { width:100%; height:100%; object-fit:cover; filter:grayscale(20%); transition:transform 0.5s var(--ease-out),filter 0.4s; }
+    .portfolio-card:hover .portfolio-img img { transform:scale(1.06); filter:grayscale(0%); }
+    .portfolio-badge { position:absolute; top:16px; left:16px; font-family:var(--ff-head); font-size:10px; font-weight:700; letter-spacing:2px; text-transform:uppercase; padding:6px 12px; background:var(--teal); color:var(--deep); }
+    .portfolio-body { padding:24px; }
+    .portfolio-cat { font-family:var(--ff-head); font-size:10px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--teal); margin-bottom:8px; }
+    .portfolio-body h3 { font-family:var(--ff-head); font-size:20px; font-weight:700; color:var(--text); margin-bottom:10px; }
+    .portfolio-body p { font-size:14px; color:var(--text-dim); line-height:1.65; }
+    .portfolio-link { display:inline-flex; align-items:center; gap:8px; margin-top:16px; font-family:var(--ff-head); font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--teal); transition:gap 0.3s; }
+    .portfolio-card:hover .portfolio-link { gap:14px; }
+    @media(max-width:900px){ .portfolio-grid{grid-template-columns:repeat(2,1fr);} }
+    @media(max-width:640px){ .portfolio-grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body>
+  <div id="cursor-dot"></div><div id="cursor-ring"></div>
+  <div id="scroll-progress"></div>
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">LEANO<span>TUMS</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="service.html">Services</a></li><li><a href="team.html">Team</a></li><li><a href="portfolio.html" class="active">Projects</a></li><li><a href="blog.html">Blog</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Contact Us</a>
+    <button class="nav-burger" id="burger"><span></span><span></span><span></span></button>
+  </nav>
+  <div id="mobile-menu"><a href="index.html" class="menu-link">Home</a><a href="about.html" class="menu-link">About</a><a href="service.html" class="menu-link">Services</a><a href="team.html" class="menu-link">Team</a><a href="portfolio.html" class="menu-link">Projects</a><a href="contact.html" class="menu-link">Contact</a><p class="menu-contact">079 517 5383 · Johannesburg</p></div>
 
-        <!-- FAVICON -->
-        <link rel="icon" type="image/png" href="favicon.png">
-        <link rel="apple-touch-icon" href="favicon.png">
-        <link rel="shortcut icon" href="favicon.ico">
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('cc.jpg')"></div>
+    <div class="page-hero-overlay"></div><div class="page-hero-grid"></div>
+    <div class="container page-hero-content">
+      <div class="page-hero-tag">Our Portfolio</div>
+      <h1>Our <span>Projects</span></h1>
+      <div class="breadcrumb-bar"><a href="index.html">Home</a><span>›</span><a href="portfolio.html">Projects</a></div>
+    </div>
+  </div>
 
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-        <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-        <link href="lib/slick/slick.css" rel="stylesheet">
-        <link href="lib/slick/slick-theme.css" rel="stylesheet">
-
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-		
-		<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "url": "https://leanotumsprojects.com",
-  "logo": "https://leanotumsprojects.com/favicon_512.png",
-  "name": "Leanotums Projects (PTY) LTD"
-}
-</script>
-		
-    </head>
-
-    <body>
-        <div class="wrapper">
-            <!-- Top Bar Start -->
-            <div class="top-bar">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4 col-md-12">
-                            <div class="logo">
-                                <a href="index.html">
-                                    <h1>Leanotums</h1>
-                                    <!-- <img src="img/logo.jpg" alt="Logo"> -->
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-7 d-none d-lg-block">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="top-bar-item">
-                                        <div class="top-bar-icon">
-                                            <i class="flaticon-calendar"></i>
-                                        </div>
-                                        <div class="top-bar-text">
-                                            <h3>Opening Hour</h3>
-                                            <p>Mon - Fri, 8:00 - 17:00</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="top-bar-item">
-                                        <div class="top-bar-icon">
-                                            <i class="flaticon-call"></i>
-                                        </div>
-                                        <div class="top-bar-text">
-                                            <h3>Call Us</h3>
-                                            <p>079 517 5383</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="top-bar-item">
-                                        <div class="top-bar-icon">
-                                            <i class="flaticon-send-mail"></i>
-                                        </div>
-                                        <div class="top-bar-text">
-                                            <h3>Email Us</h3>
-                                            <p>Leanotumsprojects@gmail.com</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Top Bar End -->
-
-            <!-- Nav Bar Start -->
-            <div class="nav-bar">
-                <div class="container-fluid">
-                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-                        <a href="#" class="navbar-brand">MENU</a>
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                            <div class="navbar-nav mr-auto">
-                                <a href="index.html" class="nav-item nav-link">Home</a>
-                                <a href="about.html" class="nav-item nav-link">About</a>
-                                <a href="service.html" class="nav-item nav-link">Service</a>
-                                <a href="team.html" class="nav-item nav-link">Team</a>
-                                <a href="portfolio.html" class="nav-item nav-link active">Project</a>
-                                <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                                    <div class="dropdown-menu">
-                                        <a href="blog.html" class="dropdown-item">Blog Page</a>
-                                        
-                                    </div>
-                                </div>
-                                <a href="contact.html" class="nav-item nav-link">Contact</a>
-                            </div>
-                            <div class="ml-auto">
-                               
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-            <!-- Nav Bar End -->
-            
-            
-            <!-- Page Header Start -->
-            <div class="page-header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2>Our Projects</h2>
-                        </div>
-                        <div class="col-12">
-                            <a href="">Home</a>
-                            <a href="">Our Projects</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Page Header End -->
-
-
-            <!-- Portfolio Start -->
-            <div class="portfolio">
-                <div class="container">
-                    <div class="section-header text-center">
-                        <p>Our Projects</p>
-                        <h2>Visit Our Projects</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <ul id="portfolio-flters">
-                                <li data-filter="*" class="filter-active">All</li>
-                                <li data-filter=".first">Complete</li>
-                                <li data-filter=".second">Running</li>
-                                <li data-filter=".third">Upcoming</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row portfolio-container">
-                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="portfolio-warp">
-                                <div class="portfolio-img">
-                                    <img src="cc.jpg" alt="Image">
-                                    <div class="portfolio-overlay">
-                                        <p>
-                                           Department of Social Development, Roodepoort CBD international Renovations
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Department of Social Development</h3>
-                                    <a class="btn" href="img/portfolio-1.jpg" data-lightbox="portfolio">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="portfolio-warp">
-                                <div class="portfolio-img">
-                                    <img src="yy.jpg" alt="Image">
-                                    <div class="portfolio-overlay">
-                                        <p>
-                                            422A Danie Theron Street, Pretoria North, offers a cozy retreat nestled in the heart of the vibrant Pretoria community. 
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>422A Danie Theron Street</h3>
-                                    <a class="btn" href="img/portfolio-2.jpg" data-lightbox="portfolio">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item third wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="portfolio-warp">
-                                <div class="portfolio-img">
-                                    <img src="oo.jpg" alt="Image">
-                                    <div class="portfolio-overlay">
-                                        <p>
-                                            With meticulous attention to detail and a vision for modern functionality, we're reshaping workspaces into vibrant hubs of productivity and inspiration.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Pretoria East. Office renovation</h3>
-                                    <a class="btn" href="img/portfolio-3.jpg" data-lightbox="portfolio">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item first wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="portfolio-warp">
-                                <div class="portfolio-img">
-                                    <img src="mm.jpg" alt="Image">
-                                    <div class="portfolio-overlay">
-                                        <p>
-                                         Department of Social Development, Roodepoort CBD international Renovations
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Department of Social Development</h3>
-                                    <a class="btn" href="img/portfolio-4.jpg" data-lightbox="portfolio">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item second wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="portfolio-warp">
-                                <div class="portfolio-img">
-                                    <img src="nn.jpg" alt="Image">
-                                    <div class="portfolio-overlay">
-                                        <p>
-                                           Plot 412 Zwavelpoort offers comfortable and convenient accommodation for employees. Nestled in a tranquil setting, this accommodation provides a welcoming retreat after a day's work. 
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Plot 412 Zwavelpoort</h3>
-                                    <a class="btn" href="img/portfolio-5.jpg" data-lightbox="portfolio">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12 portfolio-item third wow fadeInUp" data-wow-delay="0.6s">
-                            <div class="portfolio-warp">
-                                <div class="portfolio-img">
-                                    <img src="bb.jpg" alt="Image">
-                                    <div class="portfolio-overlay">
-                                        <p>
-                                           The Cullinan Diamond Mine's surface wash process is a meticulously orchestrated dance of technology and precision. 
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="portfolio-text">
-                                    <h3>Cullinan Diamond Mine Surface Wash</h3>
-                                    <a class="btn" href="img/portfolio-6.jpg" data-lightbox="portfolio">+</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 load-more">
-                            <a class="btn" href="#">Load More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Portfolio End -->
-
-
-           <!-- Footer Start -->
-            <div class="footer wow fadeIn" data-wow-delay="0.3s">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-contact">
-                                <h2>Office Contact</h2>
-                                <p><i class="fa fa-map-marker-alt"></i>417 Nimmersat Street</p>
-                                <p><i class="fa fa-phone-alt"></i>079 517 5383</p>
-                                <p><i class="fa fa-envelope"></i>Leanotumsprojects@gmail.com</p>
-                                <div class="footer-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href="https://web.facebook.com/profile.php?id=61552090770281"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://www.youtube.com/watch?v=3CRRqdf6Gn4"><i class="fab fa-youtube"></i></a>
-                                    <a href="https://www.instagram.com/leanotumsprojects"><i class="fab fa-instagram"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-link">
-                                <h2>Services Areas</h2>
-                                <a href="">Building Construction</a>
-                                <a href="">House Renovation</a>
-                                <a href="">Architecture Design</a>
-                                <a href="">Interior Design</a>
-                                <a href="">Painting</a>
-                                <a href="">Landscape & Lawnwork</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-link">
-                                <h2>Useful Pages</h2>
-                                <a href="">About Us</a>
-                                <a href="">Contact Us</a>
-                                <a href="">Our Team</a>
-                                <a href="">Projects</a>
-                                <a href="">Testimonial</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="newsletter">
-                                <h2>Newsletter</h2>
-                                <p>
-                                   Stay updated with the latest industry trends, project highlights, expert tips, and exclusive offers. Be the first to know about upcoming events, new services, and innovative construction techniques. We value your interest and look forward to sharing valuable insights with you. If you have any questions or suggestions, feel free to reach out to us. Happy building!
-                                </p>
-                                <div class="form">
-                                    <input class="form-control" placeholder="Email here">
-                                    <button class="btn">Submit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container footer-menu">
-                    <div class="f-menu">
-                        <a href="">Terms of use</a>
-                        <a href="">Privacy policy</a>
-                        <a href="">Cookies</a>
-                        <a href="">Help</a>
-                        <a href="">FQAs</a>
-                    </div>
-                </div>
-                <div class="container copyright">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>&copy; <a href="#">Leanotumsprojects</a>, All Right Reserved.</p>
-                        </div>
-						
-						<!--/*** This template is free as long as you keep the footer author's credit link/attribution link/backlink. If you'd like to use the template without the footer author's credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        <div class="col-md-6">
-                            <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Footer End -->
-
-            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <section style="background:var(--bg)">
+    <div class="container">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap">
+        <div><div class="section-label reveal">Our Work</div><h2 class="section-title reveal">Visit Our <span class="stroke">Projects</span></h2></div>
+        <p class="section-desc reveal" style="transition-delay:.2s;max-width:380px">Residential, commercial and industrial — a diverse portfolio built with precision and pride.</p>
+      </div>
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="complete">Completed</button>
+        <button class="filter-btn" data-filter="running">Running</button>
+        <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+      </div>
+      <div class="portfolio-grid">
+        <div class="portfolio-card reveal" data-cat="complete">
+          <div class="portfolio-img"><img src="cc.jpg" alt="Dept of Social Development" loading="lazy"><div class="portfolio-badge">Complete</div></div>
+          <div class="portfolio-body"><div class="portfolio-cat">Commercial · Roodepoort</div><h3>Department of Social Development</h3><p>International renovations at the Roodepoort CBD facility — full interior and structural upgrade.</p><a href="#" class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></a></div>
         </div>
+        <div class="portfolio-card reveal" style="transition-delay:.1s" data-cat="running">
+          <div class="portfolio-img"><img src="yy.jpg" alt="422A Danie Theron Street" loading="lazy"><div class="portfolio-badge" style="background:var(--deep);color:var(--teal)">Running</div></div>
+          <div class="portfolio-body"><div class="portfolio-cat">Residential · Pretoria North</div><h3>422A Danie Theron Street</h3><p>A cozy residential retreat in the heart of the Pretoria community — built with precision and care.</p><a href="#" class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></a></div>
+        </div>
+        <div class="portfolio-card reveal" style="transition-delay:.2s" data-cat="upcoming">
+          <div class="portfolio-img"><img src="oo.jpg" alt="Pretoria East Office Renovation" loading="lazy"><div class="portfolio-badge" style="background:rgba(95,158,160,0.2);color:var(--teal)">Upcoming</div></div>
+          <div class="portfolio-body"><div class="portfolio-cat">Commercial · Pretoria East</div><h3>Office Renovation</h3><p>Reshaping workspaces into vibrant hubs of productivity with meticulous attention to detail.</p><a href="#" class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></a></div>
+        </div>
+        <div class="portfolio-card reveal" style="transition-delay:.3s" data-cat="complete">
+          <div class="portfolio-img"><img src="mm.jpg" alt="Dept of Social Development 2" loading="lazy"><div class="portfolio-badge">Complete</div></div>
+          <div class="portfolio-body"><div class="portfolio-cat">Commercial · Roodepoort</div><h3>Social Development — Phase 2</h3><p>Continued renovation works at the Department of Social Development Roodepoort facility.</p><a href="#" class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></a></div>
+        </div>
+        <div class="portfolio-card reveal" style="transition-delay:.4s" data-cat="running">
+          <div class="portfolio-img"><img src="nn.jpg" alt="Plot 412 Zwavelpoort" loading="lazy"><div class="portfolio-badge" style="background:var(--deep);color:var(--teal)">Running</div></div>
+          <div class="portfolio-body"><div class="portfolio-cat">Residential · Zwavelpoort</div><h3>Plot 412 Zwavelpoort</h3><p>Comfortable and convenient employee accommodation nestled in a tranquil Zwavelpoort setting.</p><a href="#" class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></a></div>
+        </div>
+        <div class="portfolio-card reveal" style="transition-delay:.5s" data-cat="complete">
+          <div class="portfolio-img"><img src="bb.jpg" alt="Cullinan Diamond Mine" loading="lazy"><div class="portfolio-badge">Complete</div></div>
+          <div class="portfolio-body"><div class="portfolio-cat">Industrial · Cullinan</div><h3>Cullinan Diamond Mine Surface Wash Bay</h3><p>A meticulous surface wash bay construction at the iconic Cullinan Diamond Mine — precision-engineered.</p><a href="#" class="portfolio-link">View Details <i class="fas fa-arrow-right"></i></a></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/slick/slick.min.js"></script>
+  <section class="cta-band"><div class="container"><div class="cta-inner"><div class="cta-text"><div class="section-label">Work With Us</div><h2>Have a Project<br>In Mind?</h2></div><a href="contact.html" class="btn-dark">Get A Quote</a></div></div></section>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
+  <footer id="footer"><div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><div class="nav-logo">LEANO<span>TUMS</span></div><p>100% black-owned South African construction company delivering quality and reliability on every project.</p><div class="footer-social"><a href="#"><i class="fab fa-twitter"></i></a><a href="https://web.facebook.com/profile.php?id=61552090770281" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="https://www.youtube.com/watch?v=3CRRqdf6Gn4" target="_blank"><i class="fab fa-youtube"></i></a><a href="https://www.instagram.com/leanotumsprojects" target="_blank"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div></div>
+      <div class="footer-col"><h4>Services</h4><a href="service.html">Building Construction</a><a href="service.html">House Renovation</a><a href="service.html">Architecture Design</a><a href="service.html">Interior Design</a><a href="service.html">Painting</a><a href="service.html">Garden Services & Landscaping</a></div>
+      <div class="footer-col"><h4>Contact</h4><p><i class="fas fa-map-marker-alt"></i>417 Nimmersat Street, Gauteng</p><p><i class="fas fa-phone-alt"></i>079 517 5383</p><p><i class="fas fa-envelope"></i>Leanotumsprojects@gmail.com</p><p><i class="fas fa-clock"></i>Mon – Fri: 08:00 – 17:00</p></div>
+      <div class="footer-col"><h4>Newsletter</h4><p>Stay updated with project highlights and insights from our team.</p><div class="footer-newsletter" style="margin-top:16px"><input type="email" placeholder="Your email address"><button>Subscribe</button></div></div>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2025 Leanotums Projects (PTY) LTD. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Cookies</a></div></div>
+  </div></footer>
+  <button id="back-top"><i class="fas fa-chevron-up"></i></button>
+  <script src="shared.js"></script>
+</body>
 </html>

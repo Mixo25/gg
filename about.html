@@ -1,474 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Leanotumsprojects</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Construction, Builder, Building, Contractor, Construction Company, Construction Services, Renovation, Remodeling, Home Construction, Commercial Construction, Concrete Work, Roofing, Carpentry, Electrical, Plumbing, Painting, Landscaping, Interior Design, Architecture, Project Management, Johannesburg Construction, Gauteng Builders" name="keywords">
-        <meta content="Leanotumsprojects: Your trusted construction company offering building, renovation, and construction project services." name="description">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Leanotums Projects</title>
+  <meta name="description" content="Learn about Leanotums Projects — a 100% black-owned South African construction company.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .about-img-wrap { position: relative; }
+    .about-img-wrap::before { content: ''; position: absolute; top: -20px; left: -20px; width: 100%; height: 100%; border: 1px solid var(--border); z-index: 0; transition: transform 0.4s var(--ease-out); }
+    .about-img-wrap:hover::before { transform: translate(8px,8px); }
+    .about-img-wrap img { position: relative; z-index: 1; width: 100%; height: 500px; object-fit: cover; filter: grayscale(20%) contrast(1.05); }
+    .about-badge { position: absolute; bottom: -24px; right: -24px; z-index: 2; background: var(--teal); padding: 24px 28px; text-align: center; }
+    .about-badge strong { display: block; font-family: var(--ff-display); font-size: 48px; color: var(--deep); line-height: 1; }
+    .about-badge span { font-family: var(--ff-head); font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--deep); opacity: 0.7; }
+    .about-highlights { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 28px 0; }
+    .highlight-item { display: flex; align-items: center; gap: 12px; padding: 16px; background: var(--bg3); border: 1px solid var(--border); transition: border-color 0.3s; }
+    .highlight-item:hover { border-color: var(--teal); }
+    .highlight-item i { color: var(--teal); font-size: 16px; flex-shrink: 0; }
+    .highlight-item span { font-family: var(--ff-head); font-size: 14px; font-weight: 600; letter-spacing: 0.5px; }
+    .values-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; margin-top: 56px; }
+    .value-card { padding: 40px 32px; background: var(--bg3); border: 1px solid var(--border); transition: border-color 0.3s, background 0.3s; }
+    .value-card:hover { border-color: rgba(95,158,160,0.4); background: rgba(95,158,160,0.03); }
+    .value-icon { width: 52px; height: 52px; border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: var(--teal); font-size: 20px; margin-bottom: 20px; transition: border-color 0.3s, box-shadow 0.3s; }
+    .value-card:hover .value-icon { border-color: var(--teal); box-shadow: var(--glow-sm); }
+    .value-card h3 { font-family: var(--ff-head); font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+    .value-card p { font-size: 14px; color: var(--text-dim); line-height: 1.65; }
+    @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; gap: 60px; } .about-badge { bottom: -16px; right: 0; } .values-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 640px) { .about-highlights { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div id="cursor-dot"></div><div id="cursor-ring"></div>
+  <div id="scroll-progress"></div>
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">LEANO<span>TUMS</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="portfolio.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Contact Us</a>
+    <button class="nav-burger" id="burger"><span></span><span></span><span></span></button>
+  </nav>
+  <div id="mobile-menu">
+    <a href="index.html" class="menu-link">Home</a>
+    <a href="about.html" class="menu-link">About</a>
+    <a href="service.html" class="menu-link">Services</a>
+    <a href="team.html" class="menu-link">Team</a>
+    <a href="portfolio.html" class="menu-link">Projects</a>
+    <a href="contact.html" class="menu-link">Contact</a>
+    <p class="menu-contact">079 517 5383 · Johannesburg</p>
+  </div>
 
-         <!-- FAVICON -->
-        <link rel="icon" type="image/png" href="favicon.png">
-        <link rel="apple-touch-icon" href="favicon.png">
-        <link rel="shortcut icon" href="favicon.ico">
+  <div class="page-hero">
+    <div class="page-hero-bg" style="background-image:url('fotor.jpg')"></div>
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-grid"></div>
+    <div class="container page-hero-content">
+      <div class="page-hero-tag">Who We Are</div>
+      <h1>About <span>Us</span></h1>
+      <div class="breadcrumb-bar">
+        <a href="index.html">Home</a><span>›</span><a href="about.html">About</a>
+      </div>
+    </div>
+  </div>
 
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <div class="ticker-wrap"><div class="ticker-track" id="ticker"><span>Building Construction</span><span>House Renovation</span><span>Architecture Design</span><span>Interior Design</span><span>Painting</span><span>Garden Services & Landscaping</span><span>Project Management</span><span>Fixing & Support</span><span>Building Construction</span><span>House Renovation</span><span>Architecture Design</span><span>Interior Design</span><span>Painting</span><span>Garden Services & Landscaping</span><span>Project Management</span><span>Fixing & Support</span></div></div>
 
-        <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-        <link href="lib/slick/slick.css" rel="stylesheet">
-        <link href="lib/slick/slick-theme.css" rel="stylesheet">
-
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-		
-		<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "url": "https://leanotumsprojects.com",
-  "logo": "https://leanotumsprojects.com/favicon_512.png",
-  "name": "Leanotums Projects (PTY) LTD"
-}
-</script>		
-    </head>
-
-    <body>
-        <div class="wrapper">
-            <!-- Top Bar Start -->
-            <div class="top-bar">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4 col-md-12">
-                            <div class="logo">
-                                <a href="index.html">
-                                    <h1>Leanotums</h1>
-                                    
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-7 d-none d-lg-block">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="top-bar-item">
-                                        <div class="top-bar-icon">
-                                            <i class="flaticon-calendar"></i>
-                                        </div>
-                                        <div class="top-bar-text">
-                                            <h3>Opening Hour</h3>
-                                            <p>Mon - Fri, 8:00 - 17:00</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="top-bar-item">
-                                        <div class="top-bar-icon">
-                                            <i class="flaticon-call"></i>
-                                        </div>
-                                        <div class="top-bar-text">
-                                            <h3>Call Us</h3>
-                                            <p>+079 517 5383</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="top-bar-item">
-                                        <div class="top-bar-icon">
-                                            <i class="flaticon-send-mail"></i>
-                                        </div>
-                                        <div class="top-bar-text">
-                                            <h3>Email Us</h3>
-                                            <p>Leanotumsprojects@gmail.com</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Top Bar End -->
-
-            <!-- Nav Bar Start -->
-            <div class="nav-bar">
-                <div class="container-fluid">
-                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-                        <a href="#" class="navbar-brand">MENU</a>
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                            <div class="navbar-nav mr-auto">
-                                <a href="index.html" class="nav-item nav-link">Home</a>
-                                <a href="about.html" class="nav-item nav-link active">About</a>
-                                <a href="service.html" class="nav-item nav-link">Service</a>
-                                <a href="team.html" class="nav-item nav-link">Team</a>
-                                <a href="portfolio.html" class="nav-item nav-link">Project</a>
-                                <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                                    <div class="dropdown-menu">
-                                        <a href="blog.html" class="dropdown-item">Blog Page</a>
-                                        
-                                    </div>
-                                </div>
-                                <a href="contact.html" class="nav-item nav-link">Contact</a>
-                            </div>
-                            <div class="ml-auto">
-                              
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-            <!-- Nav Bar End -->
-            
-            
-            <!-- Page Header Start -->
-            <div class="page-header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2>About Us</h2>
-                        </div>
-                        <div class="col-12">
-                            <a href="">Home</a>
-                            <a href="">About Us</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Page Header End -->
-
-
-            <!-- About Start -->
-            <div class="about wow fadeInUp" data-wow-delay="0.1s">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-5 col-md-6">
-                            <div class="about-img">
-                                <img src="fotor.jpg" alt="Image">
-                            </div>
-                        </div>
-                        <div class="col-lg-7 col-md-6">
-                            <div class="section-header text-left">
-                                <p>Welcome to Leanotumsprojects</p>
-                                <h2>About Leanotumsprojects</h2>
-                            </div>
-                            <div class="about-text">
-                                <p>
-Leano Tums Projects is a small 100% black owned company, aiming to be one of the leading national & international freight logistics, construction & project management company tailored to meet specific requirements of customers. This is accomplished by learning customers' exact objectives with regard to internal and external requirements, thus ensuring that Leano Tums Projects provide quality services more consistently than any other service provider in the market.
-</p><p>Harnessing a wealth of experience, Leano Tums Projects creates cost effective solutions for its customers. Driven by competency and commitment, market leading turnaround times in completing projects, are achieved.
-Put the Leano Tums Projects team to the challenge and the innovative solutions will never fail to astonish you.
-LEANOTUMS
-</P>
-                                
-                                <a class="btn" href="">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- About End -->
-            
-            
-            <!-- Fact Start -->
-            <div class="fact">
-                <div class="container-fluid">
-                    <div class="row counters">
-                        <div class="col-md-6 fact-left wow slideInLeft">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="fact-icon">
-                                        <i class="flaticon-worker"></i>
-                                    </div>
-                                    <div class="fact-text">
-                                        <h2 data-toggle="counter-up">109</h2>
-                                        <p>Expert Workers</p>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="fact-icon">
-                                        <i class="flaticon-building"></i>
-                                    </div>
-                                    <div class="fact-text">
-                                        <h2 data-toggle="counter-up">485</h2>
-                                        <p>Happy Clients</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 fact-right wow slideInRight">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="fact-icon">
-                                        <i class="flaticon-address"></i>
-                                    </div>
-                                    <div class="fact-text">
-                                        <h2 data-toggle="counter-up">789</h2>
-                                        <p>Completed Projects</p>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="fact-icon">
-                                        <i class="flaticon-crane"></i>
-                                    </div>
-                                    <div class="fact-text">
-                                        <h2 data-toggle="counter-up">890</h2>
-                                        <p>Running Projects</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Fact End -->
-            
-            
-            <!-- FAQs Start -->
-            <div class="faqs">
-                <div class="container">
-                    <div class="section-header text-center">
-                        <p>Frequently Asked Question</p>
-                        <h2>You May Ask</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div id="accordion-1">
-                                <div class="card wow fadeInLeft" data-wow-delay="0.1s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne">
-                                            How soon can construction start? 
-                                        </a>
-                                    </div>
-                                    <div id="collapseOne" class="collapse" data-parent="#accordion-1">
-                                        <div class="card-body">
-                                          Construction can commence as soon as all necessary permits and approvals are secured, typically within a few weeks to a couple of months after finalizing the planning and design phase. We prioritize efficiency while ensuring compliance with regulations to expedite the start of construction without compromising quality.  
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card wow fadeInLeft" data-wow-delay="0.2s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseTwo">
-                                            Do you have site supervisors and subcontractors? 
-                                        </a>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" data-parent="#accordion-1">
-                                        <div class="card-body">
-                                            Absolutely, we have experienced site supervisors who oversee all aspects of the construction process, ensuring that work is carried out efficiently, safely, and to the highest standards. Additionally, we collaborate with trusted subcontractors who specialize in various trades, allowing us to deliver comprehensive solutions while maintaining rigorous quality control throughout the project.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card wow fadeInLeft" data-wow-delay="0.3s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseThree">
-                                            Do you have a project timeline?
-                                        </a>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" data-parent="#accordion-1">
-                                        <div class="card-body">
-                                           Yes, we develop detailed project timelines for all our construction projects. These timelines outline key milestones and activities from start to finish, allowing us to effectively manage the project schedule, coordinate resources, and track progress. Our commitment to transparency means that clients have full visibility into the timeline, enabling them to stay informed and confident in the progress of their project. 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card wow fadeInLeft" data-wow-delay="0.4s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseFour">
-                                            Do you provide guarantees?
-                                        </a>
-                                    </div>
-                                    <div id="collapseFour" class="collapse" data-parent="#accordion-1">
-                                        <div class="card-body">
-                                           Yes, we stand behind the quality of our workmanship and materials. We offer guarantees on our construction projects to provide peace of mind to our clients. The specific guarantees depend on the nature of the project and will be detailed in the contract agreement. Our goal is to ensure that our clients are completely satisfied with the final result, and we are committed to addressing any issues that may arise during or after construction. 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card wow fadeInLeft" data-wow-delay="0.5s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseFive">
-                                            Does our project fit your schedule and business model? 
-                                        </a>
-                                    </div>
-                                    <div id="collapseFive" class="collapse" data-parent="#accordion-1">
-                                        <div class="card-body">
-                                           Absolutely, we prioritize projects that align with our schedule and business model to ensure we can deliver the highest quality results within agreed timelines. We carefully assess each project to ensure it fits within our capacity and expertise, allowing us to provide the attention to detail and personalized service that our clients expect. Our goal is to meet and exceed your expectations while maintaining the integrity of our commitments to all our clients. 
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div id="accordion-2">
-                                <div class="card wow fadeInRight" data-wow-delay="0.1s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseSix">
-                                            What other projects have you worked on? 
-                                        </a>
-                                    </div>
-                                    <div id="collapseSix" class="collapse" data-parent="#accordion-2">
-                                        <div class="card-body">
-                                            We've had the privilege of working on a diverse range of projects spanning residential, commercial, and industrial sectors.<i> Some recent examples include:Cullinan Diamond Mine Surface Wash Bay</i><i>422A Danie Theron Street</i>
-											<i>853 Saint Bernard Drive Garsfontein</I>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card wow fadeInRight" data-wow-delay="0.2s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseSeven">
-                                            Are you insured and certified? 
-                                        </a>
-                                    </div>
-                                    <div id="collapseSeven" class="collapse" data-parent="#accordion-2">
-                                        <div class="card-body">
-                                            Yes, we are fully insured and certified to undertake construction projects. Our company carries comprehensive insurance coverage, including general liability insurance and workers' compensation insurance, to protect both our clients and our team members throughout the construction process. Additionally, we hold all necessary certifications and licenses required to operate legally and ethically in the construction industry. Our commitment to compliance and safety ensures that our clients can have confidence in our capabilities and professionalism.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card wow fadeInRight" data-wow-delay="0.3s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseEight">
-                                          What is your payment schedule?  
-                                        </a>
-                                    </div>
-                                    <div id="collapseEight" class="collapse" data-parent="#accordion-2">
-                                        <div class="card-body">
-Our payment schedule is typically structured to align with project milestones and progress. Depending on the scope and duration of the project, payments may be divided into several installments, with an initial deposit required to secure our services. Subsequent payments are then made at key stages of the project, such as upon completion of specific phases or milestones, as outlined in the contract agreement. We aim to provide flexibility and transparency in our payment schedule, ensuring that it is fair and manageable for our clients while also reflecting the progress and quality of work delivered.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card wow fadeInRight" data-wow-delay="0.4s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseNine">
-                                          How often do projects miss deadlines?  
-                                        </a>
-                                    </div>
-                                    <div id="collapseNine" class="collapse" data-parent="#accordion-2">
-                                        <div class="card-body">
-                                            At Leanotums Projects, we prioritize meticulous planning, effective communication, and proactive project management to minimize the likelihood of missing deadlines. While we strive to deliver projects on time, unforeseen circumstances such as weather delays, supply chain disruptions, or unexpected site conditions can occasionally impact our timelines. However, we mitigate these risks by implementing robust contingency plans, closely monitoring progress, and maintaining open communication with our clients throughout the project. Our track record demonstrates our commitment to meeting deadlines and delivering projects efficiently and effectively.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card wow fadeInRight" data-wow-delay="0.5s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseTen">
-                                         Is your bid an estimate or a fixed price?   
-                                        </a>
-                                    </div>
-                                    <div id="collapseTen" class="collapse" data-parent="#accordion-2">
-                                        <div class="card-body">
-Our bid typically represents a fixed price for the project, providing clarity and certainty to our clients regarding the total cost of construction. We understand the importance of budgetary transparency and strive to provide accurate and comprehensive quotes that encompass all aspects of the project, including materials, labor, permits, and overhead expenses. While unforeseen circumstances may arise during the course of the project, we are committed to honoring our fixed-price agreements to the best of our ability, ensuring that our clients can proceed with confidence and peace of mind.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- FAQs End -->
-
-
-           <!-- Footer Start -->
-            <div class="footer wow fadeIn" data-wow-delay="0.3s">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-contact">
-                                <h2>Office Contact</h2>
-                                <p><i class="fa fa-map-marker-alt"></i>417 Nimmersat Street</p>
-                                <p><i class="fa fa-phone-alt"></i>079 517 5383</p>
-                                <p><i class="fa fa-envelope"></i>Leanotumsprojects@gmail.com</p>
-                                <div class="footer-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href="https://web.facebook.com/profile.php?id=61552090770281"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://www.youtube.com/watch?v=3CRRqdf6Gn4"><i class="fab fa-youtube"></i></a>
-                                    <a href="https://www.instagram.com/leanotumsprojects"><i class="fab fa-instagram"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-link">
-                                <h2>Services Areas</h2>
-                                <a href="">Building Construction</a>
-                                <a href="">House Renovation</a>
-                                <a href="">Architecture Design</a>
-                                <a href="">Interior Design</a>
-                                <a href="">Painting</a>
-                                <a href="">Landscape & Lawnwork</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-link">
-                                <h2>Useful Pages</h2>
-                                <a href="">About Us</a>
-                                <a href="">Contact Us</a>
-                                <a href="">Our Team</a>
-                                <a href="">Projects</a>
-                                <a href="">Testimonial</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="newsletter">
-                                <h2>Newsletter</h2>
-                                <p>
-                                   Stay updated with the latest industry trends, project highlights, expert tips, and exclusive offers. Be the first to know about upcoming events, new services, and innovative construction techniques. We value your interest and look forward to sharing valuable insights with you. If you have any questions or suggestions, feel free to reach out to us. Happy building!
-                                </p>
-                                <div class="form">
-                                    <input class="form-control" placeholder="Email here">
-                                    <button class="btn">Submit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container footer-menu">
-                    <div class="f-menu">
-                        <a href="">Terms of use</a>
-                        <a href="">Privacy policy</a>
-                        <a href="">Cookies</a>
-                        <a href="">Help</a>
-                        <a href="">FQAs</a>
-                    </div>
-                </div>
-                <div class="container copyright">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>&copy; <a href="#">Leanotumsprojects</a>, All Right Reserved.</p>
-                        </div>
-						
-						<!--/*** This template is free as long as you keep the footer author's credit link/attribution link/backlink. If you'd like to use the template without the footer author's credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        <div class="col-md-6">
-                            <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Footer End -->
-
-            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <section style="background:var(--bg)">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap reveal-left">
+          <img src="fotor.jpg" alt="Leanotums Projects team" loading="lazy">
+          <div class="about-badge"><strong>5+</strong><span>Years of<br>Excellence</span></div>
         </div>
+        <div class="reveal-right">
+          <div class="section-label">Our Story</div>
+          <h2 class="section-title">Built on<br><span class="stroke">Purpose</span></h2>
+          <p class="section-desc">Leano Tums Projects is a 100% black-owned company, aiming to be one of the leading national & international freight logistics, construction & project management companies tailored to meet the specific requirements of every customer.</p>
+          <p class="section-desc" style="margin-top:16px">Harnessing a wealth of experience, we create cost-effective solutions driven by competency and commitment — achieving market-leading turnaround times on every project. Put the Leanotums team to the challenge and the innovative solutions will never fail to astonish you.</p>
+          <div class="about-highlights">
+            <div class="highlight-item"><i class="fas fa-check-circle"></i><span>Licensed & Insured</span></div>
+            <div class="highlight-item"><i class="fas fa-check-circle"></i><span>Fixed-Price Bids</span></div>
+            <div class="highlight-item"><i class="fas fa-check-circle"></i><span>Transparent Timelines</span></div>
+            <div class="highlight-item"><i class="fas fa-check-circle"></i><span>Guaranteed Quality</span></div>
+          </div>
+          <a href="service.html" class="btn-primary">Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/slick/slick.min.js"></script>
+  <section class="stats-strip">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card reveal"><i class="fas fa-hard-hat stat-icon"></i><div class="stat-number"><span class="counter" data-target="109">0</span><span class="plus">+</span></div><div class="stat-label">Expert Workers</div></div>
+        <div class="stat-card reveal" style="transition-delay:.1s"><i class="fas fa-smile stat-icon"></i><div class="stat-number"><span class="counter" data-target="485">0</span><span class="plus">+</span></div><div class="stat-label">Happy Clients</div></div>
+        <div class="stat-card reveal" style="transition-delay:.2s"><i class="fas fa-building stat-icon"></i><div class="stat-number"><span class="counter" data-target="789">0</span><span class="plus">+</span></div><div class="stat-label">Completed Projects</div></div>
+        <div class="stat-card reveal" style="transition-delay:.3s"><i class="fas fa-tools stat-icon"></i><div class="stat-number"><span class="counter" data-target="890">0</span><span class="plus">+</span></div><div class="stat-label">Running Projects</div></div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
+  <section style="background:var(--bg)">
+    <div class="container">
+      <div class="section-label reveal">Our Values</div>
+      <h2 class="section-title reveal">What Drives <span class="stroke">Us</span></h2>
+      <div class="values-grid">
+        <div class="value-card reveal"><div class="value-icon"><i class="fas fa-medal"></i></div><h3>Quality First</h3><p>Every project is executed with exceptional craftsmanship and rigorous quality control at every stage of construction.</p></div>
+        <div class="value-card reveal" style="transition-delay:.1s"><div class="value-icon"><i class="fas fa-users"></i></div><h3>Client-Centred</h3><p>We listen to your exact objectives and tailor every solution to your internal and external requirements.</p></div>
+        <div class="value-card reveal" style="transition-delay:.2s"><div class="value-icon"><i class="fas fa-shield-alt"></i></div><h3>Integrity</h3><p>Fully insured, certified, and committed to ethical practice throughout every engagement we undertake.</p></div>
+        <div class="value-card reveal" style="transition-delay:.3s"><div class="value-icon"><i class="fas fa-bolt"></i></div><h3>Efficiency</h3><p>Market-leading turnaround times driven by meticulous planning and proactive project management.</p></div>
+        <div class="value-card reveal" style="transition-delay:.4s"><div class="value-icon"><i class="fas fa-lightbulb"></i></div><h3>Innovation</h3><p>Creative, cost-effective solutions that consistently exceed client expectations on every project.</p></div>
+        <div class="value-card reveal" style="transition-delay:.5s"><div class="value-icon"><i class="fas fa-handshake"></i></div><h3>Partnership</h3><p>We build lasting relationships — our success is measured by the ongoing trust of our clients.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:var(--bg2);border-top:1px solid var(--border)">
+    <div class="container">
+      <div class="section-label reveal">FAQ</div>
+      <h2 class="section-title reveal">You May <span class="stroke">Ask</span></h2>
+      <div class="faq-grid">
+        <div class="faq-item reveal"><button class="faq-question"><span>How soon can construction start?</span><div class="faq-icon"><i class="fas fa-plus"></i></div></button><div class="faq-answer"><div class="faq-answer-inner">Construction can commence as soon as all necessary permits and approvals are secured — typically within a few weeks to a couple of months after finalizing the planning and design phase.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question"><span>Do you have site supervisors and subcontractors?</span><div class="faq-icon"><i class="fas fa-plus"></i></div></button><div class="faq-answer"><div class="faq-answer-inner">Absolutely. Our experienced site supervisors oversee all aspects of construction, and we collaborate with trusted subcontractors specializing in various trades for comprehensive, high-quality delivery.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question"><span>Do you provide guarantees?</span><div class="faq-icon"><i class="fas fa-plus"></i></div></button><div class="faq-answer"><div class="faq-answer-inner">Yes. We stand behind our workmanship and materials with formal guarantees detailed in every contract agreement. Our goal is complete client satisfaction.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question"><span>Are you insured and certified?</span><div class="faq-icon"><i class="fas fa-plus"></i></div></button><div class="faq-answer"><div class="faq-answer-inner">Yes — we carry comprehensive insurance including general liability and workers' compensation, and hold all certifications required to operate legally and ethically in South Africa's construction industry.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question"><span>Is your bid an estimate or a fixed price?</span><div class="faq-icon"><i class="fas fa-plus"></i></div></button><div class="faq-answer"><div class="faq-answer-inner">Our bids are fixed-price agreements encompassing all aspects of the project — materials, labour, permits and overhead. We honour these agreements so clients can proceed with full confidence.</div></div></div>
+        <div class="faq-item reveal"><button class="faq-question"><span>What notable projects have you completed?</span><div class="faq-icon"><i class="fas fa-plus"></i></div></button><div class="faq-answer"><div class="faq-answer-inner">Recent highlights include: Cullinan Diamond Mine Surface Wash Bay, 422A Danie Theron Street Pretoria North, 853 Saint Bernard Drive Garsfontein, and the Department of Social Development Roodepoort CBD renovations.</div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container"><div class="cta-inner"><div class="cta-text"><div class="section-label">Start Today</div><h2>Ready to Build<br>Something Great?</h2></div><a href="tel:0795175383" class="btn-dark">Call 079 517 5383</a></div></div>
+  </section>
+
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><div class="nav-logo">LEANO<span>TUMS</span></div><p>100% black-owned South African construction company delivering quality, innovation and reliability on every project since 2019.</p><div class="footer-social"><a href="#"><i class="fab fa-twitter"></i></a><a href="https://web.facebook.com/profile.php?id=61552090770281" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="https://www.youtube.com/watch?v=3CRRqdf6Gn4" target="_blank"><i class="fab fa-youtube"></i></a><a href="https://www.instagram.com/leanotumsprojects" target="_blank"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div></div>
+        <div class="footer-col"><h4>Services</h4><a href="service.html">Building Construction</a><a href="service.html">House Renovation</a><a href="service.html">Architecture Design</a><a href="service.html">Interior Design</a><a href="service.html">Painting</a><a href="service.html">Garden Services & Landscaping</a></div>
+        <div class="footer-col"><h4>Contact</h4><p><i class="fas fa-map-marker-alt"></i>417 Nimmersat Street, Gauteng</p><p><i class="fas fa-phone-alt"></i>079 517 5383</p><p><i class="fas fa-envelope"></i>Leanotumsprojects@gmail.com</p><p><i class="fas fa-clock"></i>Mon – Fri: 08:00 – 17:00</p></div>
+        <div class="footer-col"><h4>Newsletter</h4><p>Stay updated with project highlights, industry trends and exclusive insights from the Leanotums team.</p><div class="footer-newsletter" style="margin-top:16px"><input type="email" placeholder="Your email address"><button>Subscribe</button></div></div>
+      </div>
+      <div class="footer-bottom"><p>&copy; 2025 Leanotums Projects (PTY) LTD. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Cookies</a></div></div>
+    </div>
+  </footer>
+  <button id="back-top"><i class="fas fa-chevron-up"></i></button>
+  <script src="shared.js"></script>
+</body>
 </html>

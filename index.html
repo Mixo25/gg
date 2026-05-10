@@ -1,772 +1,1743 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Leanotumsprojects</title>
-        <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Construction, Builder, Building, Contractor, Construction Company, Construction Services, Renovation, Remodeling, Home Construction, Commercial Construction, Concrete Work, Roofing, Carpentry, Electrical, Plumbing, Painting, Landscaping, Interior Design, Architecture, Project Management, Johannesburg Construction, Gauteng Builders" name="keywords">
-        <meta content="Leanotumsprojects: Your trusted construction company offering building, renovation, and construction project services." name="description">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leanotums Projects | Build the Future</title>
+  <meta name="description" content="Leanotums Projects (PTY) LTD — Your trusted construction company offering building, renovation, and project management services in Johannesburg & beyond.">
+  <meta name="keywords" content="Construction, Builder, Building, Contractor, Johannesburg Construction, Gauteng Builders, Renovation, Architecture">
+  <link rel="icon" href="favicon.ico">
 
-        <!-- FAVICON -->
-        <link rel="icon" type="image/png" href="favicon.png">
-        <link rel="apple-touch-icon" href="favicon.png">
-        <link rel="shortcut icon" href="favicon.ico">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=Bebas+Neue&display=swap" rel="stylesheet">
 
-        <!-- Google Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-        <!-- CSS Libraries -->
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
-        <link href="lib/animate/animate.min.css" rel="stylesheet">
-        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-        <link href="lib/slick/slick.css" rel="stylesheet">
-        <link href="lib/slick/slick-theme.css" rel="stylesheet">
+  <style>
+    /* ═══════════════════════════════════════════════════════════════
+       RESET & BASE
+    ═══════════════════════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        <!-- Template Stylesheet -->
-        <link href="css/style.css" rel="stylesheet">
-		
-		<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "url": "https://leanotumsprojects.com",
-  "logo": "https://leanotumsprojects.com/favicon_512.png",
-  "name": "Leanotums Projects (PTY) LTD"
-}
-</script>
+    :root {
+      --amber:       #5F9EA0;
+      --amber-light: #7DBFC1;
+      --amber-dim:   #2B6B6D;
+      --copper:      #002F31;
+      --bg:          #080c0c;
+      --bg2:         #0c1212;
+      --bg3:         #121919;
+      --bg4:         #182020;
+      --surface:     #1e2828;
+      --border:      rgba(95,158,160,0.2);
+      --text:        #EDF4F4;
+      --text-dim:    #8AACAD;
+      --text-faint:  #3D6667;
+      --ff-display:  'Bebas Neue', sans-serif;
+      --ff-head:     'Rajdhani', sans-serif;
+      --ff-body:     'DM Sans', sans-serif;
+      --glow: 0 0 30px rgba(95,158,160,0.4), 0 0 80px rgba(95,158,160,0.15);
+      --glow-sm: 0 0 14px rgba(95,158,160,0.45);
+      --ease-out: cubic-bezier(0.16,1,0.3,1);
+    }
 
-    </head>
+    html { scroll-behavior: smooth; }
 
-    <body>
-        <div class="wrapper">
-            <!-- Top Bar Start -->
-            <div class="top-bar">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4 col-md-12">
-                            <div class="logo">
-                                <a href="index.html">
-                                    <h1>Leanotums</h1>
-                                    <!-- <img src="img/logo.jpg" alt="Logo"> -->
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-8 col-md-7 d-none d-lg-block">
-                            <div class="row">
-                                <div class="col-4">
-                                    <div class="top-bar-item">
-                                        <div class="top-bar-icon">
-                                            <i class="flaticon-calendar"></i>
-                                        </div>
-                                        <div class="top-bar-text">
-                                            <h3>Opening Hour</h3>
-                                            <p>Mon - Fri, 8:00 - 17:00</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="top-bar-item">
-                                        <div class="top-bar-icon">
-                                            <i class="flaticon-call"></i>
-                                        </div>
-                                        <div class="top-bar-text">
-                                            <h3>Call Us</h3>
-                                            <p>079 517 5383</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="top-bar-item">
-                                        <div class="top-bar-icon">
-                                            <i class="flaticon-send-mail"></i>
-                                        </div>
-                                        <div class="top-bar-text">
-                                            <h3>Email Us</h3>
-                                            <p>Leanotumsprojects@gmail.com</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Top Bar End -->
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--ff-body);
+      font-size: 16px;
+      line-height: 1.65;
+      overflow-x: hidden;
+      cursor: none;
+    }
 
-            <!-- Nav Bar Start -->
-            <div class="nav-bar">
-                <div class="container-fluid">
-                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
-                        <a href="#" class="navbar-brand">MENU</a>
-                        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+    ::selection { background: var(--amber); color: var(--copper); }
 
-                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                            <div class="navbar-nav mr-auto">
-                                <a href="index.html" class="nav-item nav-link active">Home</a>
-                                <a href="about.html" class="nav-item nav-link">About</a>
-                                <a href="service.html" class="nav-item nav-link">Service</a>
-                                <a href="team.html" class="nav-item nav-link">Team</a>
-                                <a href="portfolio.html" class="nav-item nav-link">Project</a>
-                                <div class="nav-item dropdown">
-                                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages</a>
-                                    <div class="dropdown-menu">
-                                        <a href="blog.html" class="dropdown-item">Blog Page</a>
-                                        
-                                    </div>
-                                </div>
-                                <a href="contact.html" class="nav-item nav-link">Contact</a>
-                            </div>
-                            <div class="ml-auto">
-                                
-                            </div>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-            <!-- Nav Bar End -->
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
 
+    /* ═══════════════════════════════════════════════════════════════
+       CUSTOM CURSOR
+    ═══════════════════════════════════════════════════════════════ */
+    #cursor-dot, #cursor-ring {
+      position: fixed; top: 0; left: 0;
+      pointer-events: none; z-index: 99999;
+      border-radius: 50%; transform: translate(-50%, -50%);
+      transition: opacity 0.3s;
+    }
+    #cursor-dot {
+      width: 8px; height: 8px;
+      background: var(--amber);
+      box-shadow: var(--glow-sm);
+    }
+    #cursor-ring {
+      width: 34px; height: 34px;
+      border: 1.5px solid rgba(95,158,160,0.5);
+      transition: width 0.2s var(--ease-out), height 0.2s var(--ease-out), background 0.2s;
+    }
+    body.cursor-hover #cursor-ring {
+      width: 60px; height: 60px;
+      background: rgba(95,158,160,0.06);
+      border-color: var(--amber);
+    }
 
-            <!-- Carousel Start -->
-            <div id="carousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel" data-slide-to="1"></li>
-                </ol>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="66.jpg" alt="Carousel Image">
-                        <div class="carousel-caption">
-                            <p class="animated fadeInRight">Build</p>
-                            <h1 class="animated fadeInLeft">Your Dream Project</h1>
-                        </div>
-                    </div>
+    /* ═══════════════════════════════════════════════════════════════
+       SCROLLBAR
+    ═══════════════════════════════════════════════════════════════ */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--amber); border-radius: 2px; }
 
-                    <div class="carousel-item">
-                        <img src="kk.png" alt="Carousel Image">
-                        <div class="carousel-caption">
-                            <p class="animated fadeInRight">Professional Builder</p>
-                            <h1 class="animated fadeInLeft">We Build Your Home</h1>
-                        </div>
-                    </div>
+    /* ═══════════════════════════════════════════════════════════════
+       NOISE OVERLAY
+    ═══════════════════════════════════════════════════════════════ */
+    body::before {
+      content: '';
+      position: fixed; inset: 0; z-index: 9998;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.022;
+    }
 
-                   
-                </div>
+    /* ═══════════════════════════════════════════════════════════════
+       PROGRESS BAR
+    ═══════════════════════════════════════════════════════════════ */
+    #scroll-progress {
+      position: fixed; top: 0; left: 0; z-index: 9000;
+      height: 2px; width: 0%;
+      background: linear-gradient(90deg, var(--amber), var(--copper));
+      transition: width 0.1s linear;
+      box-shadow: var(--glow-sm);
+    }
 
-                <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-            <!-- Carousel End -->
+    /* ═══════════════════════════════════════════════════════════════
+       NAVIGATION
+    ═══════════════════════════════════════════════════════════════ */
+    #navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 8000;
+      padding: 20px 48px;
+      display: flex; align-items: center; justify-content: space-between;
+      transition: background 0.4s, padding 0.4s, backdrop-filter 0.4s;
+    }
+    #navbar.scrolled {
+      padding: 12px 48px;
+      background: rgba(8,8,8,0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
 
+    .nav-logo {
+      font-family: var(--ff-display);
+      font-size: 28px; letter-spacing: 3px;
+      color: var(--text);
+    }
+    .nav-logo span { color: var(--amber); }
 
-            <!-- Feature Start-->
-            <div class="feature wow fadeInUp" data-wow-delay="0.1s">
-                <div class="container-fluid">
-                    <div class="row align-items-center">
-                        <div class="col-lg-4 col-md-12">
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <i class="flaticon-worker"></i>
-                                </div>
-                                <div class="feature-text">
-                                    <h3>Expert Worker</h3>
-                                    <p>Highly skilled in all aspects of construction work, our expert worker brings a wealth of knowledge and proficiency to every project. </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12">
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <i class="flaticon-building"></i>
-                                </div>
-                                <div class="feature-text">
-                                    <h3>Quality Work</h3>
-                                    <p>Exceptional craftsmanship and attention to detail truly set this construction company apart.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12">
-                            <div class="feature-item">
-                                <div class="feature-icon">
-                                    <i class="flaticon-call"></i>
-                                </div>
-                                <div class="feature-text">
-                                    <h3>24/7 Support</h3>
-                                    <p>Our dedicated team ensures round-the-clock support, guaranteeing assistance at any hour for all your construction needs.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Feature End-->
+    .nav-links {
+      display: flex; align-items: center; gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--ff-head);
+      font-size: 13px; font-weight: 600;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: var(--text-dim);
+      position: relative; padding-bottom: 4px;
+      transition: color 0.3s;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: 0; left: 0;
+      width: 0; height: 1px; background: var(--amber);
+      transition: width 0.3s var(--ease-out);
+    }
+    .nav-links a:hover { color: var(--amber); }
+    .nav-links a:hover::after { width: 100%; }
 
+    .nav-cta {
+      font-family: var(--ff-head);
+      font-size: 12px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      padding: 10px 24px;
+      border: 1px solid var(--amber);
+      color: var(--amber);
+      transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+    }
+    .nav-cta:hover {
+      background: var(--amber); color: var(--copper);
+      box-shadow: var(--glow);
+    }
 
-            <!-- About Start -->
-            <div class="about wow fadeInUp" data-wow-delay="0.1s">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-5 col-md-6">
-                            <div class="about-img">
-                                <img src="fotor.jpg" alt="Image">
-                            </div>
-                        </div>
-                        <div class="col-lg-7 col-md-6">
-                            <div class="section-header text-left">
-                                <p>Welcome to Leanotumsprojects</p>
-                                <h2>About Leanotumsprojects</h2>
-                            </div>
-                            <div class="about-text">
-                                <p>Leano Tums Projects is a small 100% black owned company, aiming to be one of the leading national & international freight logistics, construction & project management company tailored to meet specific requirements of customers. This is accomplished by learning customers' exact objectives with regard to internal and external requirements, thus ensuring that Leano Tums Projects provide quality services more consistently than any other service provider in the market.
+    /* Mobile burger */
+    .nav-burger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .nav-burger span {
+      display: block; width: 28px; height: 2px;
+      background: var(--text);
+      transition: transform 0.4s, opacity 0.4s, background 0.3s;
+    }
+    .nav-burger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); background: var(--amber); }
+    .nav-burger.active span:nth-child(2) { opacity: 0; }
+    .nav-burger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); background: var(--amber); }
 
-                                    
-                                </p>
-                                <p>
-                                    Harnessing a wealth of experience, Leano Tums Projects creates cost effective solutions for its customers. Driven by competency and commitment, market leading turnaround times in completing projects, are achieved.
-Put the Leano Tums Projects team to the challenge and the innovative solutions will never fail to astonish you.
-LEANOTUMS
+    /* Mobile menu */
+    #mobile-menu {
+      position: fixed; inset: 0; z-index: 7000;
+      background: var(--bg);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 32px;
+      transform: translateX(100%);
+      transition: transform 0.5s var(--ease-out);
+    }
+    #mobile-menu.open { transform: translateX(0); }
+    #mobile-menu a {
+      font-family: var(--ff-display);
+      font-size: clamp(36px, 8vw, 64px);
+      letter-spacing: 4px;
+      color: var(--text-dim);
+      transition: color 0.3s;
+    }
+    #mobile-menu a:hover { color: var(--amber); }
+    #mobile-menu .menu-contact {
+      margin-top: 20px;
+      font-family: var(--ff-head); font-size: 14px;
+      letter-spacing: 2px; color: var(--text-faint);
+      text-transform: uppercase;
+    }
 
-                                </p>
-                                <a class="btn" href="">Learn More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- About End -->
+    /* ═══════════════════════════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════════════════════════ */
+    #hero {
+      position: relative; height: 100vh; min-height: 600px;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
 
+    #hero-canvas {
+      position: absolute; inset: 0; z-index: 0;
+    }
 
+    .hero-bg {
+      position: absolute; inset: 0; z-index: 1;
+      background-image: url('66.jpg');
+      background-size: cover; background-position: center;
+      transform: scale(1.08);
+      transition: transform 20s linear;
+      animation: heroKenBurns 20s linear infinite alternate;
+    }
+    @keyframes heroKenBurns {
+      from { transform: scale(1.0) translateX(0); }
+      to   { transform: scale(1.1) translateX(-2%); }
+    }
 
-            <!-- Fact Start -->
-            <div class="fact">
-                <div class="container-fluid">
-                    <div class="row counters">
-                        <div class="col-md-6 fact-left wow slideInLeft">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="fact-icon">
-                                        <i class="flaticon-worker"></i>
-                                    </div>
-                                    <div class="fact-text">
-                                        <h2 data-toggle="counter-up">109</h2>
-                                        <p>Expert Workers</p>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="fact-icon">
-                                        <i class="flaticon-building"></i>
-                                    </div>
-                                    <div class="fact-text">
-                                        <h2 data-toggle="counter-up">485</h2>
-                                        <p>Happy Clients</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 fact-right wow slideInRight">
-                            <div class="row">
-                                <div class="col-6">
-                                    <div class="fact-icon">
-                                        <i class="flaticon-address"></i>
-                                    </div>
-                                    <div class="fact-text">
-                                        <h2 data-toggle="counter-up">789</h2>
-                                        <p>Completed Projects</p>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="fact-icon">
-                                        <i class="flaticon-crane"></i>
-                                    </div>
-                                    <div class="fact-text">
-                                        <h2 data-toggle="counter-up">890</h2>
-                                        <p>Running Projects</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Fact End -->
+    .hero-overlay {
+      position: absolute; inset: 0; z-index: 2;
+      background: linear-gradient(
+        135deg,
+        rgba(8,8,8,0.88) 0%,
+        rgba(8,8,8,0.60) 50%,
+        rgba(8,8,8,0.82) 100%
+      );
+    }
 
+    .hero-lines {
+      position: absolute; inset: 0; z-index: 3;
+      background-image:
+        linear-gradient(rgba(95,158,160,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(95,158,160,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse at center, rgba(0,0,0,0.4) 0%, transparent 70%);
+    }
 
-         <!-- Service Start -->
-            <div class="service">
-                <div class="container">
-                    <div class="section-header text-center">
-                        <p>Our Services</p>
-                        <h2>We Provide Services</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="service-item">
-                                <div class="service-img">
-                                    <img src="bb.jpg" alt="Image">
-                                    <div class="service-overlay">
-                                        <p>
-                                            From foundation to finish, our comprehensive construction services encompass everything from site preparation and structural framing to interior finishes and landscaping, ensuring your project is built to the highest standards of quality and craftsmanship.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="service-text">
-                                    <h3>Building Construction</h3>
-                                    <a class="btn" href="img/service-1.jpg" data-lightbox="service">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="service-item">
-                                <div class="service-img">
-                                    <img src="cc.jpg" alt="Image">
-                                    <div class="service-overlay">
-                                        <p>
-                                           From structural upgrades to aesthetic enhancements, we offer comprehensive house renovation services tailored to breathe new life into your home.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="service-text">
-                                    <h3>House Renovation</h3>
-                                    <a class="btn" href="img/service-2.jpg" data-lightbox="service">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                            <div class="service-item">
-                                <div class="service-img">
-                                    <img src="yy.jpg" alt="Image">
-                                    <div class="service-overlay">
-                                        <p>
-                                            From conceptualizing innovative structures to executing meticulous blueprints, our architecture design services blend creativity with precision to bring your vision to life.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="service-text">
-                                    <h3>Architecture Design</h3>
-                                    <a class="btn" href="img/service-3.jpg" data-lightbox="service">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                            <div class="service-item">
-                                <div class="service-img">
-                                    <img src="oo.jpg" alt="Image">
-                                    <div class="service-overlay">
-                                        <p>
-                                            Transform your space into a personalized sanctuary with our comprehensive interior design services, tailored to reflect your unique style and elevate the ambiance of your home or business.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="service-text">
-                                    <h3>Interior Design</h3>
-                                    <a class="btn" href="img/service-4.jpg" data-lightbox="service">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                            <div class="service-item">
-                                <div class="service-img">
-                                    <img src="mm.jpg" alt="Image">
-                                    <div class="service-overlay">
-                                        <p>
-                                           Clients rely on our expert team for seamless fixes and reliable support, ensuring their construction projects stay on track and trouble-free.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="service-text">
-                                    <h3>Fixing & Support</h3>
-                                    <a class="btn" href="img/service-5.jpg" data-lightbox="service">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                            <div class="service-item">
-                                <div class="service-img">
-                                    <img src="nn.jpg" alt="Image">
-                                    <div class="service-overlay">
-                                        <p>
-                                           Transforming spaces with precision and artistry, our skilled team offers comprehensive painting services to elevate your construction project to new heights. 
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="service-text">
-                                    <h3>Painting</h3>
-                                    <a class="btn" href="img/service-6.jpg" data-lightbox="service">+</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                            <div class="service-item">
-                                <div class="service-img">
-                                    <img src="service-7.jpg" alt="Image">
-                                    <div class="service-overlay">
-                                        <p>
-                                            Transform your outdoor spaces with our professional landscape and lawn services. We create beautiful, functional environments through custom garden designs, lawn installation, regular maintenance, and hardscaping solutions that enhance your property's beauty and value.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="service-text">
-                                    <h3>Landscape & Lawnwork</h3>
-                                    <a class="btn" href="img/service-7.jpg" data-lightbox="service">+</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Service End -->
+    .hero-content {
+      position: relative; z-index: 5;
+      text-align: center; padding: 0 24px;
+      max-width: 960px;
+    }
 
+    .hero-tag {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--ff-head);
+      font-size: 11px; font-weight: 600; letter-spacing: 4px;
+      text-transform: uppercase; color: var(--amber);
+      margin-bottom: 24px;
+      opacity: 0; transform: translateY(20px);
+      animation: fadeUp 0.8s 0.3s var(--ease-out) forwards;
+    }
+    .hero-tag::before, .hero-tag::after {
+      content: ''; flex: 1; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--amber));
+      width: 40px;
+    }
+    .hero-tag::after { background: linear-gradient(90deg, var(--amber), transparent); }
 
-            <!-- Team Start -->
-            <div class="team">
-                <div class="container">
-                    <div class="section-header text-center">
-                        <p>Our Team</p>
-                        <h2>Meet Our Engineer</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                            <div class="team-item">
-                                <div class="team-img">
-                                    <img src="thabo.jpg" alt="Team Image">
-                                </div>
-                                <div class="team-text">
-                                    <h2>Thabo Mosidi</h2>
-                                    <p>CEO & Founder</p>
-                                </div>
-                                <div class="team-social">
-                                    <a class="social-tw" href=""><i class="fab fa-twitter"></i></a>
-                                    <a class="social-fb" href=""><i class="fab fa-facebook-f"></i></a>
-                                    <a class="social-li" href=""><i class="fab fa-linkedin-in"></i></a>
-                                    <a class="social-in" href=""><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                       
-            <!-- FAQs Start -->
-            <div class="faqs">
-                <div class="container">
-                    <div class="section-header text-center">
-                        <p>Frequently Asked Question</p>
-                        <h2>You May Ask</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div id="accordion-1">
-                                <div class="card wow fadeInLeft" data-wow-delay="0.1s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseOne">
-                                            How soon can construction start?
-                                        </a>
-                                    </div>
-                                    <div id="collapseOne" class="collapse" data-parent="#accordion-1">
-                                        <div class="card-body">
-                                            Construction can commence as soon as all necessary permits and approvals are secured, typically within a few weeks to a couple of months after finalizing the planning and design phase. We prioritize efficiency while ensuring compliance with regulations to expedite the start of construction without compromising quality.  
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card wow fadeInLeft" data-wow-delay="0.2s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseTwo">
-                                             Do you have site supervisors and subcontractors?
-                                        </a>
-                                    </div>
-                                    <div id="collapseTwo" class="collapse" data-parent="#accordion-1">
-                                        <div class="card-body">
-                                            Absolutely, we have experienced site supervisors who oversee all aspects of the construction process, ensuring that work is carried out efficiently, safely, and to the highest standards. Additionally, we collaborate with trusted subcontractors who specialize in various trades, allowing us to deliver comprehensive solutions while maintaining rigorous quality control throughout the project.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card wow fadeInLeft" data-wow-delay="0.3s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseThree">
-                                             Do you have a project timeline?
-                                        </a>
-                                    </div>
-                                    <div id="collapseThree" class="collapse" data-parent="#accordion-1">
-                                        <div class="card-body">
-                                              Yes, we develop detailed project timelines for all our construction projects. These timelines outline key milestones and activities from start to finish, allowing us to effectively manage the project schedule, coordinate resources, and track progress. Our commitment to transparency means that clients have full visibility into the timeline, enabling them to stay informed and confident in the progress of their project. 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card wow fadeInLeft" data-wow-delay="0.4s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseFour">
-                                           Do you provide guarantees?
-                                        </a>
-                                    </div>
-                                    <div id="collapseFour" class="collapse" data-parent="#accordion-1">
-                                        <div class="card-body">
-                                           Yes, we stand behind the quality of our workmanship and materials. We offer guarantees on our construction projects to provide peace of mind to our clients. The specific guarantees depend on the nature of the project and will be detailed in the contract agreement. Our goal is to ensure that our clients are completely satisfied with the final result, and we are committed to addressing any issues that may arise during or after construction. 
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card wow fadeInLeft" data-wow-delay="0.5s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseFive">
-                                            Does our project fit your schedule and business model?
-                                        </a>
-                                    </div>
-                                    <div id="collapseFive" class="collapse" data-parent="#accordion-1">
-                                        <div class="card-body">
-                                            Absolutely, we prioritize projects that align with our schedule and business model to ensure we can deliver the highest quality results within agreed timelines. We carefully assess each project to ensure it fits within our capacity and expertise, allowing us to provide the attention to detail and personalized service that our clients expect. Our goal is to meet and exceed your expectations while maintaining the integrity of our commitments to all our clients.  
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div id="accordion-2">
-                                <div class="card wow fadeInRight" data-wow-delay="0.1s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseSix">
-                                             What other projects have you worked on?
-                                        </a>
-                                    </div>
-                                    <div id="collapseSix" class="collapse" data-parent="#accordion-2">
-                                        <div class="card-body">
-                                             We've had the privilege of working on a diverse range of projects spanning residential, commercial, and industrial sectors.<i> Some recent examples include:Cullinan Diamond Mine Surface Wash Bay</i><i>422A Danie Theron Street</i>
-											<i>853 Saint Bernard Drive Garsfontein</I>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card wow fadeInRight" data-wow-delay="0.2s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseSeven">
-                                            Are you insured and certified?
-                                        </a>
-                                    </div>
-                                    <div id="collapseSeven" class="collapse" data-parent="#accordion-2">
-                                        <div class="card-body">
-                                            Yes, we are fully insured and certified to undertake construction projects. Our company carries comprehensive insurance coverage, including general liability insurance and workers' compensation insurance, to protect both our clients and our team members throughout the construction process. Additionally, we hold all necessary certifications and licenses required to operate legally and ethically in the construction industry. Our commitment to compliance and safety ensures that our clients can have confidence in our capabilities and professionalism.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card wow fadeInRight" data-wow-delay="0.3s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseEight">
-                                            What is your payment schedule?
-                                        </a>
-                                    </div>
-                                    <div id="collapseEight" class="collapse" data-parent="#accordion-2">
-                                        <div class="card-body">
-                                            Our payment schedule is typically structured to align with project milestones and progress. Depending on the scope and duration of the project, payments may be divided into several installments, with an initial deposit required to secure our services. Subsequent payments are then made at key stages of the project, such as upon completion of specific phases or milestones, as outlined in the contract agreement. We aim to provide flexibility and transparency in our payment schedule, ensuring that it is fair and manageable for our clients while also reflecting the progress and quality of work delivered.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card wow fadeInRight" data-wow-delay="0.4s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseNine">
-                                            How often do projects miss deadlines?
-                                        </a>
-                                    </div>
-                                    <div id="collapseNine" class="collapse" data-parent="#accordion-2">
-                                        <div class="card-body">
-                                            At Leanotums Projects, we prioritize meticulous planning, effective communication, and proactive project management to minimize the likelihood of missing deadlines. While we strive to deliver projects on time, unforeseen circumstances such as weather delays, supply chain disruptions, or unexpected site conditions can occasionally impact our timelines. However, we mitigate these risks by implementing robust contingency plans, closely monitoring progress, and maintaining open communication with our clients throughout the project. Our track record demonstrates our commitment to meeting deadlines and delivering projects efficiently and effectively.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card wow fadeInRight" data-wow-delay="0.5s">
-                                    <div class="card-header">
-                                        <a class="card-link collapsed" data-toggle="collapse" href="#collapseTen">
-                                            Is your bid an estimate or a fixed price? 
-                                        </a>
-                                    </div>
-                                    <div id="collapseTen" class="collapse" data-parent="#accordion-2">
-                                        <div class="card-body">
-                                            Our bid typically represents a fixed price for the project, providing clarity and certainty to our clients regarding the total cost of construction. We understand the importance of budgetary transparency and strive to provide accurate and comprehensive quotes that encompass all aspects of the project, including materials, labor, permits, and overhead expenses. While unforeseen circumstances may arise during the course of the project, we are committed to honoring our fixed-price agreements to the best of our ability, ensuring that our clients can proceed with confidence and peace of mind.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- FAQs End -->
+    .hero-title {
+      font-family: var(--ff-display);
+      font-size: clamp(56px, 10vw, 120px);
+      line-height: 0.92; letter-spacing: 4px;
+      color: var(--text);
+      opacity: 0; transform: translateY(40px);
+      animation: fadeUp 1s 0.5s var(--ease-out) forwards;
+    }
+    .hero-title .accent { color: var(--amber); display: block; }
 
+    .hero-sub {
+      font-family: var(--ff-body);
+      font-size: clamp(14px, 2vw, 18px);
+      color: var(--text-dim); max-width: 560px; margin: 24px auto 0;
+      line-height: 1.7;
+      opacity: 0; transform: translateY(30px);
+      animation: fadeUp 1s 0.7s var(--ease-out) forwards;
+    }
 
-            
+    .hero-actions {
+      display: flex; align-items: center; justify-content: center;
+      gap: 20px; margin-top: 40px; flex-wrap: wrap;
+      opacity: 0; transform: translateY(30px);
+      animation: fadeUp 1s 0.9s var(--ease-out) forwards;
+    }
 
+    .btn-primary {
+      font-family: var(--ff-head);
+      font-size: 13px; font-weight: 700; letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 16px 40px;
+      background: var(--amber); color: var(--copper);
+      border: none; cursor: pointer;
+      position: relative; overflow: hidden;
+      transition: box-shadow 0.3s, transform 0.2s;
+      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 12px 100%, 0 calc(100% - 12px));
+    }
+    .btn-primary::before {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(135deg, transparent 40%, rgba(255,255,255,0.2));
+      transform: translateX(-100%);
+      transition: transform 0.4s var(--ease-out);
+    }
+    .btn-primary:hover { box-shadow: var(--glow); transform: translateY(-2px); }
+    .btn-primary:hover::before { transform: translateX(0); }
 
-            <!-- Blog Start -->
-            <div class="blog">
-                <div class="container">
-                    <div class="section-header text-center">
-                        <p>Latest Blog</p>
-                        <h2>Latest From Our Blog</h2>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <img src="oo.jpg" alt="Image">
-                                </div>
-                                <div class="blog-title">
-                                    <h3>Pretoria East. Office renovation</h3>
-                                    <a class="btn" href="">+</a>
-                                </div>
-                                <div class="blog-meta">
-                                    <p>By<a href="">Admin</a></p>
-                                    <p>In<a href="">Construction</a></p>
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                       With meticulous attention to detail and a vision for modern functionality, we're reshaping workspaces into vibrant hubs of productivity and inspiration.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <img src="nn.jpg" alt="Image">
-                                </div>
-                                <div class="blog-title">
-                                    <h3>Plot 412 Zwavelpoort</h3>
-                                    <a class="btn" href="">+</a>
-                                </div>
-                                <div class="blog-meta">
-                                    <p>By<a href="">Admin</a></p>
-                                    <p>In<a href="">Construction</a></p>
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                        Plot 412 Zwavelpoort offers comfortable and convenient accommodation for employees. Nestled in a tranquil setting, this accommodation provides a welcoming retreat after a day's work. 
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                            <div class="blog-item">
-                                <div class="blog-img">
-                                    <img src="yy.jpg" alt="Image">
-                                </div>
-                                <div class="blog-title">
-                                    <h3>422A Danie Theron Street</h3>
-                                    <a class="btn" href="">+</a>
-                                </div>
-                                <div class="blog-meta">
-                                    <p>By<a href="">Admin</a></p>
-                                    <p>In<a href="">Construction</a></p>
-                                </div>
-                                <div class="blog-text">
-                                    <p>
-                                        422A Danie Theron Street, Pretoria North, offers a cozy retreat nestled in the heart of the vibrant Pretoria community. 
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Blog End -->
+    .btn-outline {
+      font-family: var(--ff-head);
+      font-size: 13px; font-weight: 700; letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 15px 36px;
+      background: transparent; color: var(--text);
+      border: 1px solid rgba(255,255,255,0.2); cursor: pointer;
+      transition: border-color 0.3s, color 0.3s;
+    }
+    .btn-outline:hover { border-color: var(--amber); color: var(--amber); }
 
+    .hero-scroll-indicator {
+      position: absolute; bottom: 32px; left: 50%;
+      transform: translateX(-50%); z-index: 5;
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      opacity: 0; animation: fadeIn 1s 1.4s forwards;
+    }
+    .hero-scroll-indicator span {
+      font-family: var(--ff-head);
+      font-size: 10px; letter-spacing: 3px; color: var(--text-faint);
+      text-transform: uppercase;
+    }
+    .scroll-line {
+      width: 1px; height: 48px;
+      background: linear-gradient(to bottom, var(--amber), transparent);
+      animation: scrollPulse 2s ease-in-out infinite;
+    }
+    @keyframes scrollPulse {
+      0%,100% { opacity: 0.3; transform: scaleY(0.8); }
+      50% { opacity: 1; transform: scaleY(1); }
+    }
 
-           <!-- Footer Start -->
-            <div class="footer wow fadeIn" data-wow-delay="0.3s">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-contact">
-                                <h2>Office Contact</h2>
-                                <p><i class="fa fa-map-marker-alt"></i>417 Nimmersat Street</p>
-                                <p><i class="fa fa-phone-alt"></i>079 517 5383</p>
-                                <p><i class="fa fa-envelope"></i>Leanotumsprojects@gmail.com</p>
-                                <div class="footer-social">
-                                    <a href=""><i class="fab fa-twitter"></i></a>
-                                    <a href="https://web.facebook.com/profile.php?id=61552090770281"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://www.youtube.com/watch?v=3CRRqdf6Gn4"><i class="fab fa-youtube"></i></a>
-                                    <a href="https://www.instagram.com/leanotumsprojects"><i class="fab fa-instagram"></i></a>
-                                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-link">
-                                <h2>Services Areas</h2>
-                                <a href="">Building Construction</a>
-                                <a href="">House Renovation</a>
-                                <a href="">Architecture Design</a>
-                                <a href="">Interior Design</a>
-                                <a href="">Painting</a>
-                                <a href="">Landscape & Lawnwork</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="footer-link">
-                                <h2>Useful Pages</h2>
-                                <a href="">About Us</a>
-                                <a href="">Contact Us</a>
-                                <a href="">Our Team</a>
-                                <a href="">Projects</a>
-                                <a href="">Testimonial</a>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-lg-3">
-                            <div class="newsletter">
-                                <h2>Newsletter</h2>
-                                <p>
-                                   Stay updated with the latest industry trends, project highlights, expert tips, and exclusive offers. Be the first to know about upcoming events, new services, and innovative construction techniques. We value your interest and look forward to sharing valuable insights with you. If you have any questions or suggestions, feel free to reach out to us. Happy building!
-                                </p>
-                                <div class="form">
-                                    <input class="form-control" placeholder="Email here">
-                                    <button class="btn">Submit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="container footer-menu">
-                    <div class="f-menu">
-                        <a href="">Terms of use</a>
-                        <a href="">Privacy policy</a>
-                        <a href="">Cookies</a>
-                        <a href="">Help</a>
-                        <a href="">FQAs</a>
-                    </div>
-                </div>
-                <div class="container copyright">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <p>&copy; <a href="#">Leanotumsprojects</a>, All Right Reserved.</p>
-                        </div>
-						
-						<!--/*** This template is free as long as you keep the footer author's credit link/attribution link/backlink. If you'd like to use the template without the footer author's credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        <div class="col-md-6">
-                            <p>Designed By <a href="https://htmlcodex.com">HTML Codex</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Footer End -->
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
 
-            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    /* ═══════════════════════════════════════════════════════════════
+       TICKER / MARQUEE
+    ═══════════════════════════════════════════════════════════════ */
+    .ticker-wrap {
+      background: var(--amber);
+      overflow: hidden; padding: 10px 0;
+      white-space: nowrap;
+    }
+    .ticker-track {
+      display: inline-block;
+      animation: ticker 30s linear infinite;
+    }
+    .ticker-track span {
+      font-family: var(--ff-head);
+      font-size: 12px; font-weight: 700; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--copper);
+      padding: 0 40px;
+    }
+    .ticker-track span::before {
+      content: '◆'; margin-right: 40px; opacity: 0.4;
+    }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       SECTION COMMONS
+    ═══════════════════════════════════════════════════════════════ */
+    section { padding: 100px 0; }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .container-wide { max-width: 1400px; margin: 0 auto; padding: 0 24px; }
+
+    .section-label {
+      font-family: var(--ff-head);
+      font-size: 11px; font-weight: 600; letter-spacing: 5px;
+      text-transform: uppercase; color: var(--amber);
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 16px;
+    }
+    .section-label::before {
+      content: ''; width: 32px; height: 1px; background: var(--amber);
+    }
+
+    .section-title {
+      font-family: var(--ff-display);
+      font-size: clamp(40px, 6vw, 72px);
+      line-height: 1; letter-spacing: 2px;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .section-title .stroke {
+      -webkit-text-stroke: 1px var(--amber);
+      color: transparent;
+    }
+
+    .section-desc {
+      font-size: 16px; color: var(--text-dim);
+      max-width: 520px; line-height: 1.7;
+    }
+
+    /* reveal animation */
+    .reveal {
+      opacity: 0; transform: translateY(40px);
+      transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left {
+      opacity: 0; transform: translateX(-40px);
+      transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+    }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right {
+      opacity: 0; transform: translateX(40px);
+      transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+    }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+    /* ═══════════════════════════════════════════════════════════════
+       FEATURES STRIP
+    ═══════════════════════════════════════════════════════════════ */
+    #features {
+      padding: 0;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .feature-card {
+      padding: 48px 40px;
+      display: flex; align-items: flex-start; gap: 20px;
+      border-right: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    .feature-card:last-child { border-right: none; }
+    .feature-card:hover { background: rgba(95,158,160,0.04); }
+    .feature-icon-wrap {
+      width: 52px; height: 52px; flex-shrink: 0;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--amber); font-size: 20px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .feature-card:hover .feature-icon-wrap {
+      border-color: var(--amber);
+      box-shadow: var(--glow-sm);
+    }
+    .feature-card h3 {
+      font-family: var(--ff-head);
+      font-size: 18px; font-weight: 700; letter-spacing: 1px;
+      color: var(--text); margin-bottom: 6px;
+    }
+    .feature-card p { font-size: 14px; color: var(--text-dim); line-height: 1.65; }
+
+    /* ═══════════════════════════════════════════════════════════════
+       ABOUT
+    ═══════════════════════════════════════════════════════════════ */
+    #about { background: var(--bg); }
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: center;
+    }
+    .about-img-wrap {
+      position: relative;
+    }
+    .about-img-wrap::before {
+      content: '';
+      position: absolute; top: -20px; left: -20px;
+      width: 100%; height: 100%;
+      border: 1px solid var(--border); z-index: 0;
+      transition: transform 0.4s var(--ease-out);
+    }
+    .about-img-wrap:hover::before { transform: translate(8px, 8px); }
+    .about-img-wrap img {
+      position: relative; z-index: 1;
+      width: 100%; height: 500px; object-fit: cover;
+      filter: grayscale(20%) contrast(1.05);
+    }
+    .about-badge {
+      position: absolute; bottom: -24px; right: -24px; z-index: 2;
+      background: var(--amber); padding: 24px 28px;
+      text-align: center;
+    }
+    .about-badge strong {
+      display: block;
+      font-family: var(--ff-display);
+      font-size: 48px; color: var(--copper); line-height: 1;
+    }
+    .about-badge span {
+      font-family: var(--ff-head);
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--copper); opacity: 0.8;
+    }
+    .about-content .section-desc { max-width: 100%; margin-bottom: 32px; }
+    .about-highlights {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 16px; margin-bottom: 36px;
+    }
+    .highlight-item {
+      display: flex; align-items: center; gap: 12px;
+      padding: 16px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      transition: border-color 0.3s;
+    }
+    .highlight-item:hover { border-color: var(--amber); }
+    .highlight-item i { color: var(--amber); font-size: 16px; flex-shrink: 0; }
+    .highlight-item span {
+      font-family: var(--ff-head);
+      font-size: 14px; font-weight: 600; letter-spacing: 0.5px;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       STATS
+    ═══════════════════════════════════════════════════════════════ */
+    #stats {
+      padding: 80px 0;
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      position: relative; overflow: hidden;
+    }
+    #stats::before {
+      content: '';
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(95,158,160,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .stats-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+    }
+    .stat-card {
+      padding: 48px 32px; text-align: center;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      position: relative; overflow: hidden;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .stat-card::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--amber);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s var(--ease-out);
+    }
+    .stat-card:hover { border-color: rgba(95,158,160,0.4); background: rgba(95,158,160,0.03); }
+    .stat-card:hover::after { transform: scaleX(1); }
+    .stat-number {
+      font-family: var(--ff-display);
+      font-size: clamp(56px, 6vw, 80px);
+      color: var(--amber);
+      line-height: 1;
+      display: flex; align-items: baseline; justify-content: center; gap: 4px;
+    }
+    .stat-number .plus { font-size: 0.5em; color: var(--amber); }
+    .stat-label {
+      font-family: var(--ff-head);
+      font-size: 12px; font-weight: 600; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--text-dim);
+      margin-top: 8px;
+    }
+    .stat-icon {
+      font-size: 32px; color: rgba(95,158,160,0.12);
+      position: absolute; top: 16px; right: 16px;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       SERVICES
+    ═══════════════════════════════════════════════════════════════ */
+    #services { background: var(--bg); }
+    .services-header {
+      display: flex; align-items: flex-end; justify-content: space-between;
+      margin-bottom: 56px; gap: 24px;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .service-card {
+      position: relative; overflow: hidden;
+      aspect-ratio: 3/4; cursor: pointer;
+      background: var(--bg3);
+    }
+    .service-card img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.6s var(--ease-out), filter 0.6s;
+      filter: grayscale(40%) brightness(0.7);
+    }
+    .service-card:hover img {
+      transform: scale(1.08);
+      filter: grayscale(0%) brightness(0.75);
+    }
+    .service-card-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(8,8,8,0.95) 0%, rgba(8,8,8,0.3) 55%, transparent 100%);
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: 32px;
+    }
+    .service-number {
+      position: absolute; top: 20px; right: 20px;
+      font-family: var(--ff-display);
+      font-size: 72px; color: rgba(95,158,160,0.12);
+      line-height: 1;
+      transition: color 0.3s;
+    }
+    .service-card:hover .service-number { color: rgba(95,158,160,0.25); }
+    .service-card-tag {
+      font-family: var(--ff-head);
+      font-size: 10px; font-weight: 700; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--amber);
+      margin-bottom: 8px;
+    }
+    .service-card h3 {
+      font-family: var(--ff-head);
+      font-size: 22px; font-weight: 700;
+      color: var(--text); margin-bottom: 8px;
+    }
+    .service-card p {
+      font-size: 13px; color: rgba(245,245,240,0.6);
+      line-height: 1.6;
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.5s var(--ease-out), opacity 0.4s;
+      opacity: 0;
+    }
+    .service-card:hover p { max-height: 120px; opacity: 1; }
+    .service-arrow {
+      display: flex; align-items: center; gap: 8px;
+      font-family: var(--ff-head);
+      font-size: 12px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--amber);
+      margin-top: 16px;
+      transform: translateX(-8px); opacity: 0;
+      transition: transform 0.3s var(--ease-out), opacity 0.3s;
+    }
+    .service-card:hover .service-arrow { transform: translateX(0); opacity: 1; }
+
+    /* Wide services (row 2: 4 cards) */
+    .services-grid-2 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px; margin-top: 2px;
+    }
+    .service-card-sm {
+      position: relative; overflow: hidden;
+      aspect-ratio: 1/1; cursor: pointer;
+    }
+    .service-card-sm img {
+      width: 100%; height: 100%; object-fit: cover;
+      transition: transform 0.6s var(--ease-out), filter 0.6s;
+      filter: grayscale(40%) brightness(0.65);
+    }
+    .service-card-sm:hover img {
+      transform: scale(1.1);
+      filter: grayscale(0%) brightness(0.7);
+    }
+    .service-card-sm .service-card-overlay { padding: 20px; }
+    .service-card-sm h3 { font-size: 17px; }
+
+    /* ═══════════════════════════════════════════════════════════════
+       TEAM
+    ═══════════════════════════════════════════════════════════════ */
+    #team {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+    }
+    .team-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 2px; margin-top: 56px;
+    }
+    .team-card {
+      position: relative; overflow: hidden;
+      background: var(--bg3);
+    }
+    .team-card img {
+      width: 100%; aspect-ratio: 3/4;
+      object-fit: cover; object-position: top;
+      filter: grayscale(30%);
+      transition: filter 0.4s, transform 0.5s var(--ease-out);
+    }
+    .team-card:hover img { filter: grayscale(0%); transform: scale(1.04); }
+    .team-info {
+      padding: 20px;
+      background: var(--bg3);
+      border-top: 1px solid var(--border);
+      transition: background 0.3s;
+    }
+    .team-card:hover .team-info { background: rgba(95,158,160,0.06); }
+    .team-info h3 {
+      font-family: var(--ff-head);
+      font-size: 18px; font-weight: 700; color: var(--text);
+    }
+    .team-info p {
+      font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--amber); font-family: var(--ff-head); font-weight: 600;
+      margin-top: 4px;
+    }
+    .team-socials {
+      display: flex; gap: 12px; margin-top: 16px;
+    }
+    .team-socials a {
+      width: 32px; height: 32px;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 12px; color: var(--text-dim);
+      transition: border-color 0.3s, color 0.3s, background 0.3s;
+    }
+    .team-socials a:hover {
+      border-color: var(--amber); color: var(--amber);
+      background: rgba(95,158,160,0.08);
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       FAQ
+    ═══════════════════════════════════════════════════════════════ */
+    #faq { background: var(--bg); }
+    .faq-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 2px; margin-top: 56px;
+    }
+    .faq-item {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: border-color 0.3s;
+    }
+    .faq-item.open { border-color: rgba(95,158,160,0.4); }
+    .faq-question {
+      width: 100%; padding: 24px 28px;
+      background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      text-align: left;
+    }
+    .faq-question span {
+      font-family: var(--ff-head);
+      font-size: 16px; font-weight: 600; color: var(--text);
+      transition: color 0.3s;
+    }
+    .faq-item.open .faq-question span { color: var(--amber); }
+    .faq-icon {
+      width: 28px; height: 28px; flex-shrink: 0;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--amber); font-size: 12px;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--amber); color: var(--copper); }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.5s var(--ease-out);
+    }
+    .faq-answer-inner {
+      padding: 0 28px 24px;
+      font-size: 14px; color: var(--text-dim); line-height: 1.7;
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       PROJECTS
+    ═══════════════════════════════════════════════════════════════ */
+    #projects {
+      background: var(--bg2);
+      border-top: 1px solid var(--border);
+    }
+    .projects-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 20px; margin-top: 56px;
+    }
+    .project-card {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .project-card:hover { border-color: rgba(95,158,160,0.4); transform: translateY(-4px); }
+    .project-card-img {
+      overflow: hidden; height: 220px;
+    }
+    .project-card-img img {
+      width: 100%; height: 100%; object-fit: cover;
+      filter: grayscale(20%);
+      transition: transform 0.5s var(--ease-out), filter 0.4s;
+    }
+    .project-card:hover .project-card-img img {
+      transform: scale(1.06); filter: grayscale(0%);
+    }
+    .project-card-body { padding: 24px; }
+    .project-cat {
+      font-family: var(--ff-head);
+      font-size: 10px; font-weight: 700; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--amber);
+      margin-bottom: 8px;
+    }
+    .project-card-body h3 {
+      font-family: var(--ff-head);
+      font-size: 19px; font-weight: 700; color: var(--text);
+      margin-bottom: 10px;
+    }
+    .project-card-body p { font-size: 14px; color: var(--text-dim); line-height: 1.65; }
+    .project-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin-top: 16px;
+      font-family: var(--ff-head);
+      font-size: 12px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--amber);
+      transition: gap 0.3s;
+    }
+    .project-card:hover .project-link { gap: 14px; }
+
+    /* ═══════════════════════════════════════════════════════════════
+       CTA BAND
+    ═══════════════════════════════════════════════════════════════ */
+    #cta {
+      padding: 80px 0;
+      background: var(--amber);
+      position: relative; overflow: hidden;
+    }
+    #cta::before {
+      content: 'BUILD';
+      position: absolute; right: -20px; top: 50%;
+      transform: translateY(-50%);
+      font-family: var(--ff-display);
+      font-size: clamp(120px, 18vw, 240px);
+      color: rgba(0,47,49,0.1); line-height: 1;
+      pointer-events: none; user-select: none;
+    }
+    .cta-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 40px; flex-wrap: wrap;
+    }
+    .cta-text .section-label { color: rgba(0,47,49,0.6); }
+    .cta-text .section-label::before { background: rgba(0,47,49,0.5); }
+    .cta-text h2 {
+      font-family: var(--ff-display);
+      font-size: clamp(36px, 5vw, 64px);
+      color: var(--copper); letter-spacing: 2px; line-height: 1.1;
+    }
+    .btn-dark {
+      font-family: var(--ff-head);
+      font-size: 13px; font-weight: 700; letter-spacing: 3px;
+      text-transform: uppercase;
+      padding: 18px 44px;
+      background: var(--copper); color: var(--amber);
+      border: 2px solid var(--copper); cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+      white-space: nowrap;
+    }
+    .btn-dark:hover { background: transparent; color: var(--copper); }
+
+    /* ═══════════════════════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════════════════════ */
+    #footer {
+      background: #030303;
+      border-top: 1px solid var(--border);
+      padding: 80px 0 0;
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1.8fr;
+      gap: 60px; padding-bottom: 60px;
+      border-bottom: 1px solid var(--border);
+    }
+    .footer-brand .nav-logo { font-size: 32px; margin-bottom: 16px; }
+    .footer-brand p { font-size: 14px; color: var(--text-faint); line-height: 1.7; max-width: 280px; }
+    .footer-social {
+      display: flex; gap: 10px; margin-top: 24px;
+    }
+    .footer-social a {
+      width: 36px; height: 36px;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px; color: var(--text-faint);
+      transition: border-color 0.3s, color 0.3s;
+    }
+    .footer-social a:hover { border-color: var(--amber); color: var(--amber); }
+
+    .footer-col h4 {
+      font-family: var(--ff-head);
+      font-size: 13px; font-weight: 700; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--text);
+      margin-bottom: 24px; padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+    }
+    .footer-col a, .footer-col p {
+      display: block;
+      font-size: 14px; color: var(--text-faint);
+      margin-bottom: 12px; line-height: 1.5;
+      transition: color 0.3s;
+    }
+    .footer-col a:hover { color: var(--amber); }
+    .footer-col i { color: var(--amber); margin-right: 8px; font-size: 12px; }
+
+    .footer-newsletter input {
+      width: 100%; padding: 12px 16px;
+      background: var(--bg3); border: 1px solid var(--border);
+      color: var(--text); font-family: var(--ff-body); font-size: 14px;
+      outline: none; margin-bottom: 8px;
+      transition: border-color 0.3s;
+    }
+    .footer-newsletter input:focus { border-color: var(--amber); }
+    .footer-newsletter button {
+      width: 100%; padding: 12px;
+      background: var(--amber); color: var(--copper);
+      border: none; cursor: pointer;
+      font-family: var(--ff-head); font-size: 12px;
+      font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+      transition: background 0.3s;
+    }
+    .footer-newsletter button:hover { background: var(--amber-light); }
+
+    .footer-bottom {
+      padding: 24px 0;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+    }
+    .footer-bottom p {
+      font-size: 12px; color: var(--text-faint); letter-spacing: 1px;
+    }
+    .footer-bottom-links {
+      display: flex; gap: 24px;
+    }
+    .footer-bottom-links a {
+      font-size: 12px; color: var(--text-faint); letter-spacing: 1px;
+      transition: color 0.3s;
+    }
+    .footer-bottom-links a:hover { color: var(--amber); }
+
+    /* ═══════════════════════════════════════════════════════════════
+       BACK TO TOP
+    ═══════════════════════════════════════════════════════════════ */
+    #back-top {
+      position: fixed; bottom: 32px; right: 32px; z-index: 5000;
+      width: 44px; height: 44px;
+      background: var(--amber); color: var(--copper);
+      border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px;
+      opacity: 0; transform: translateY(20px);
+      transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s;
+      clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px));
+    }
+    #back-top.show { opacity: 1; transform: translateY(0); }
+    #back-top:hover { box-shadow: var(--glow); }
+
+    /* ═══════════════════════════════════════════════════════════════
+       MOBILE RESPONSIVENESS
+    ═══════════════════════════════════════════════════════════════ */
+    @media (max-width: 1100px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 900px) {
+      #navbar { padding: 16px 24px; }
+      #navbar.scrolled { padding: 12px 24px; }
+      .nav-links, .nav-cta { display: none; }
+      .nav-burger { display: flex; }
+
+      .about-grid { grid-template-columns: 1fr; gap: 60px; }
+      .about-badge { bottom: -16px; right: 0; }
+
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .services-grid-2 { grid-template-columns: repeat(2, 1fr); }
+
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .faq-grid { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .services-header { flex-direction: column; align-items: flex-start; }
+      .cta-inner { flex-direction: column; }
+    }
+
+    @media (max-width: 640px) {
+      section { padding: 72px 0; }
+
+      .features-grid { grid-template-columns: 1fr; }
+      .feature-card { border-right: none; border-bottom: 1px solid var(--border); }
+      .feature-card:last-child { border-bottom: none; }
+
+      .about-highlights { grid-template-columns: 1fr; }
+
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+
+      .services-grid { grid-template-columns: 1fr; }
+      .services-grid-2 { grid-template-columns: repeat(2, 1fr); }
+      .service-card { aspect-ratio: 4/3; }
+      .service-card p { max-height: 100px; opacity: 1; }
+      .service-arrow { opacity: 1; transform: none; }
+
+      .team-grid { grid-template-columns: repeat(2, 1fr); }
+      .projects-grid { grid-template-columns: 1fr; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+
+      #back-top { bottom: 20px; right: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cursor -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+
+  <!-- Scroll Progress -->
+  <div id="scroll-progress"></div>
+
+  <!-- ═══ NAV ══════════════════════════════════════════════════════ -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">LEANO<span>TUMS</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="portfolio.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Contact Us</a>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu">
+    <a href="about.html" class="menu-link">About</a>
+    <a href="service.html" class="menu-link">Services</a>
+    <a href="team.html" class="menu-link">Team</a>
+    <a href="portfolio.html" class="menu-link">Projects</a>
+    <a href="blog.html" class="menu-link">Blog</a>
+    
+    
+    <a href="contact.html" class="menu-link">Contact</a>
+    <p class="menu-contact">079 517 5383 &nbsp;·&nbsp; Johannesburg</p>
+  </div>
+
+  <!-- ═══ HERO ══════════════════════════════════════════════════════ -->
+  <section id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-lines"></div>
+    <div class="hero-content">
+      <div class="hero-tag">Johannesburg &nbsp;·&nbsp; Est. 2019 &nbsp;·&nbsp; 100% Black Owned</div>
+      <h1 class="hero-title">
+        We Build
+        <span class="accent">The Future.</span>
+      </h1>
+      <p class="hero-sub">Leanotums Projects (PTY) LTD — Precision construction, bold architecture & relentless project delivery across Gauteng and beyond.</p>
+      <div class="hero-actions">
+        <a href="#services" class="btn-primary">Our Services</a>
+        <a href="#about" class="btn-outline">Learn More</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══ TICKER ════════════════════════════════════════════════════ -->
+  <div class="ticker-wrap">
+    <div class="ticker-track" id="ticker">
+      <span>Building Construction</span>
+      <span>House Renovation</span>
+      <span>Architecture Design</span>
+      <span>Interior Design</span>
+      <span>Painting</span>
+      <span>Garden Services & Landscaping</span>
+      <span>Project Management</span>
+      <span>Fixing & Support</span>
+      <!-- Duplicate for seamless loop -->
+      <span>Building Construction</span>
+      <span>House Renovation</span>
+      <span>Architecture Design</span>
+      <span>Interior Design</span>
+      <span>Painting</span>
+      <span>Garden Services & Landscaping</span>
+      <span>Project Management</span>
+      <span>Fixing & Support</span>
+    </div>
+  </div>
+
+  <!-- ═══ FEATURES ═════════════════════════════════════════════════ -->
+  <section id="features">
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon-wrap"><i class="fas fa-hard-hat"></i></div>
+        <div>
+          <h3>Expert Workforce</h3>
+          <p>Highly skilled in all aspects of construction, our team brings unmatched knowledge and proficiency to every project.</p>
         </div>
+      </div>
+      <div class="feature-card reveal" style="transition-delay:0.1s">
+        <div class="feature-icon-wrap"><i class="fas fa-medal"></i></div>
+        <div>
+          <h3>Quality Work</h3>
+          <p>Exceptional craftsmanship and attention to detail that sets us apart — every finish built to last a lifetime.</p>
+        </div>
+      </div>
+      <div class="feature-card reveal" style="transition-delay:0.2s">
+        <div class="feature-icon-wrap"><i class="fas fa-headset"></i></div>
+        <div>
+          <h3>24/7 Support</h3>
+          <p>Round-the-clock assistance guaranteeing support at any hour for all your construction needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-        <script src="lib/isotope/isotope.pkgd.min.js"></script>
-        <script src="lib/lightbox/js/lightbox.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/counterup/counterup.min.js"></script>
-        <script src="lib/slick/slick.min.js"></script>
+  <!-- ═══ ABOUT ═════════════════════════════════════════════════════ -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap reveal-left">
+          <img src="fotor.jpg" alt="Leanotums Projects team at work" loading="lazy">
+          <div class="about-badge">
+            <strong>5+</strong>
+            <span>Years of<br>Excellence</span>
+          </div>
+        </div>
+        <div class="about-content reveal-right">
+          <div class="section-label">About Leanotums</div>
+          <h2 class="section-title">Building with<br><span class="stroke">Purpose</span></h2>
+          <p class="section-desc">Leano Tums Projects is a small 100% black-owned company, aiming to be one of the leading national & international freight logistics, construction & project management companies tailored to meet the specific requirements of every client.</p>
+          <p class="section-desc" style="margin-top:16px; margin-bottom:32px;">Harnessing a wealth of experience, we create cost-effective solutions driven by competency and commitment — achieving market-leading turnaround times on every project.</p>
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Licensed & Insured</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Fixed-Price Bids</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Transparent Timelines</span>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-check-circle"></i>
+              <span>Guaranteed Quality</span>
+            </div>
+          </div>
+          <a href="#services" class="btn-primary">Explore Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-    </body>
+  <!-- ═══ STATS ═════════════════════════════════════════════════════ -->
+  <section id="stats">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-card reveal" style="transition-delay:0s">
+          <i class="fas fa-hard-hat stat-icon"></i>
+          <div class="stat-number"><span class="counter" data-target="109">0</span><span class="plus">+</span></div>
+          <div class="stat-label">Expert Workers</div>
+        </div>
+        <div class="stat-card reveal" style="transition-delay:0.1s">
+          <i class="fas fa-smile stat-icon"></i>
+          <div class="stat-number"><span class="counter" data-target="485">0</span><span class="plus">+</span></div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat-card reveal" style="transition-delay:0.2s">
+          <i class="fas fa-building stat-icon"></i>
+          <div class="stat-number"><span class="counter" data-target="789">0</span><span class="plus">+</span></div>
+          <div class="stat-label">Completed Projects</div>
+        </div>
+        <div class="stat-card reveal" style="transition-delay:0.3s">
+          <i class="fas fa-crane stat-icon"></i>
+          <div class="stat-number"><span class="counter" data-target="890">0</span><span class="plus">+</span></div>
+          <div class="stat-label">Running Projects</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICES ══════════════════════════════════════════════════ -->
+  <section id="services">
+    <div class="container-wide">
+      <div class="services-header">
+        <div>
+          <div class="section-label reveal">What We Do</div>
+          <h2 class="section-title reveal">Our <span class="stroke">Services</span></h2>
+        </div>
+        <p class="section-desc reveal" style="transition-delay:0.2s">From foundations to finishing touches — we cover the full spectrum of construction services.</p>
+      </div>
+
+      <!-- Row 1: 3 large cards -->
+      <div class="services-grid">
+        <div class="service-card reveal" style="transition-delay:0s">
+          <img src="bb.jpg" alt="Building Construction" loading="lazy">
+          <div class="service-card-overlay">
+            <div class="service-number">01</div>
+            <div class="service-card-tag">Construction</div>
+            <h3>Building Construction</h3>
+            <p>From foundation to finish — site preparation, structural framing, interior finishes and landscaping built to the highest standards.</p>
+            <div class="service-arrow">Explore <i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+        <div class="service-card reveal" style="transition-delay:0.1s">
+          <img src="cc.jpg" alt="House Renovation" loading="lazy">
+          <div class="service-card-overlay">
+            <div class="service-number">02</div>
+            <div class="service-card-tag">Renovation</div>
+            <h3>House Renovation</h3>
+            <p>Structural upgrades to aesthetic enhancements — comprehensive renovation services that breathe new life into your home.</p>
+            <div class="service-arrow">Explore <i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+        <div class="service-card reveal" style="transition-delay:0.2s">
+          <img src="yy.jpg" alt="Architecture Design" loading="lazy">
+          <div class="service-card-overlay">
+            <div class="service-number">03</div>
+            <div class="service-card-tag">Architecture</div>
+            <h3>Architecture Design</h3>
+            <p>Conceptualizing innovative structures to executing meticulous blueprints — creativity blended with precision.</p>
+            <div class="service-arrow">Explore <i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: 4 smaller cards -->
+      <div class="services-grid-2">
+        <div class="service-card service-card-sm reveal" style="transition-delay:0s">
+          <img src="oo.jpg" alt="Interior Design" loading="lazy">
+          <div class="service-card-overlay">
+            <div class="service-number">04</div>
+            <div class="service-card-tag">Interiors</div>
+            <h3>Interior Design</h3>
+            <p>Personalized sanctuaries — crafted to reflect your unique style.</p>
+            <div class="service-arrow">Explore <i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+        <div class="service-card service-card-sm reveal" style="transition-delay:0.1s">
+          <img src="mm.jpg" alt="Fixing & Support" loading="lazy">
+          <div class="service-card-overlay">
+            <div class="service-number">05</div>
+            <div class="service-card-tag">Support</div>
+            <h3>Fixing & Support</h3>
+            <p>Reliable fixes that keep your projects on track, trouble-free.</p>
+            <div class="service-arrow">Explore <i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+        <div class="service-card service-card-sm reveal" style="transition-delay:0.2s">
+          <img src="nn.jpg" alt="Painting" loading="lazy">
+          <div class="service-card-overlay">
+            <div class="service-number">06</div>
+            <div class="service-card-tag">Finishing</div>
+            <h3>Painting</h3>
+            <p>Precision and artistry that elevates every surface.</p>
+            <div class="service-arrow">Explore <i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+        <div class="service-card service-card-sm reveal" style="transition-delay:0.3s">
+          <img src="service-7.jpg" alt="Garden Services & Landscaping" loading="lazy">
+          <div class="service-card-overlay">
+            <div class="service-number">07</div>
+            <div class="service-card-tag">Landscape</div>
+            <h3>Garden Services & Landscaping</h3>
+            <p>Beautiful outdoor environments that enhance property value.</p>
+            <div class="service-arrow">Explore <i class="fas fa-arrow-right"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TEAM ══════════════════════════════════════════════════════ -->
+  <section id="team">
+    <div class="container">
+      <div class="section-label reveal">The People</div>
+      <h2 class="section-title reveal">Meet the <span class="stroke">Team</span></h2>
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <img src="thabo.jpg" alt="Thabo Mosidi" loading="lazy">
+          <div class="team-info">
+            <h3>Thabo Mosidi</h3>
+            <p>CEO & Founder</p>
+            <div class="team-socials">
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="https://web.facebook.com/profile.php?id=61552090770281" target="_blank"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/leanotumsprojects" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Placeholder cards to fill the grid visually -->
+        <div class="team-card reveal" style="transition-delay:0.1s; background: var(--bg4);">
+          <div style="height:280px; display:flex;align-items:center;justify-content:center;background:var(--bg3);">
+            <i class="fas fa-plus" style="font-size:36px;color:var(--border)"></i>
+          </div>
+          <div class="team-info">
+            <h3 style="color:var(--text-faint)">Join Our Team</h3>
+            <p>Open Positions</p>
+          </div>
+        </div>
+        <div class="team-card reveal" style="transition-delay:0.2s; background: var(--bg4);">
+          <div style="height:280px; display:flex;align-items:center;justify-content:center;background:var(--bg3);">
+            <i class="fas fa-plus" style="font-size:36px;color:var(--border)"></i>
+          </div>
+          <div class="team-info">
+            <h3 style="color:var(--text-faint)">Join Our Team</h3>
+            <p>Open Positions</p>
+          </div>
+        </div>
+        <div class="team-card reveal" style="transition-delay:0.3s; background: var(--bg4);">
+          <div style="height:280px; display:flex;align-items:center;justify-content:center;background:var(--bg3);">
+            <i class="fas fa-plus" style="font-size:36px;color:var(--border)"></i>
+          </div>
+          <div class="team-info">
+            <h3 style="color:var(--text-faint)">Join Our Team</h3>
+            <p>Open Positions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══════════════════════════════════════════════════════ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-label reveal">FAQ</div>
+      <h2 class="section-title reveal">You May <span class="stroke">Ask</span></h2>
+      <div class="faq-grid">
+        <!-- Col 1 -->
+        <div class="faq-item reveal" style="transition-delay:0s">
+          <button class="faq-question">
+            <span>How soon can construction start?</span>
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Construction can commence as soon as all necessary permits and approvals are secured — typically within a few weeks to a couple of months after finalizing the planning and design phase. We prioritize efficiency while ensuring full regulatory compliance.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="transition-delay:0.05s">
+          <button class="faq-question">
+            <span>Do you have site supervisors and subcontractors?</span>
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Absolutely. Our experienced site supervisors oversee all aspects of construction, and we collaborate with trusted subcontractors who specialize in various trades — ensuring comprehensive solutions with rigorous quality control throughout.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="transition-delay:0.1s">
+          <button class="faq-question">
+            <span>Do you have a project timeline?</span>
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Yes — we develop detailed project timelines with key milestones from start to finish. Clients have full visibility, enabling them to stay informed and confident throughout every phase of their project.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="transition-delay:0.15s">
+          <button class="faq-question">
+            <span>Do you provide guarantees?</span>
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Yes. We stand behind our workmanship and materials with formal guarantees detailed in every contract agreement. Our goal is complete client satisfaction — and we are committed to addressing any issues that may arise.</div>
+          </div>
+        </div>
+        <!-- Col 2 -->
+        <div class="faq-item reveal" style="transition-delay:0.2s">
+          <button class="faq-question">
+            <span>Are you insured and certified?</span>
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Yes — we carry comprehensive insurance including general liability and workers' compensation. We hold all certifications and licenses required to operate legally and ethically in the South African construction industry.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="transition-delay:0.25s">
+          <button class="faq-question">
+            <span>What is your payment schedule?</span>
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Our payment schedule aligns with project milestones. An initial deposit secures our services, with subsequent payments made at key stages as outlined in the contract. We aim for maximum transparency and flexibility.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="transition-delay:0.3s">
+          <button class="faq-question">
+            <span>Is your bid an estimate or a fixed price?</span>
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Our bids are fixed-price agreements that encompass all aspects of the project — materials, labour, permits and overhead. We are committed to honoring these agreements so clients can proceed with full confidence.</div>
+          </div>
+        </div>
+        <div class="faq-item reveal" style="transition-delay:0.35s">
+          <button class="faq-question">
+            <span>What notable projects have you completed?</span>
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">We've worked across residential, commercial and industrial sectors. Recent highlights include: Cullinan Diamond Mine Surface Wash Bay, 422A Danie Theron Street, Pretoria North, and 853 Saint Bernard Drive, Garsfontein.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROJECTS ══════════════════════════════════════════════════ -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label reveal">Our Work</div>
+      <h2 class="section-title reveal">Recent <span class="stroke">Projects</span></h2>
+      <div class="projects-grid">
+        <div class="project-card reveal" style="transition-delay:0s">
+          <div class="project-card-img">
+            <img src="oo.jpg" alt="Office Renovation" loading="lazy">
+          </div>
+          <div class="project-card-body">
+            <div class="project-cat">Renovation · Pretoria East</div>
+            <h3>Office Renovation</h3>
+            <p>Reshaping workspaces into vibrant hubs of productivity and inspiration with meticulous attention to detail.</p>
+            <a href="portfolio.html" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="project-card reveal" style="transition-delay:0.1s">
+          <div class="project-card-img">
+            <img src="nn.jpg" alt="Plot 412 Zwavelpoort" loading="lazy">
+          </div>
+          <div class="project-card-body">
+            <div class="project-cat">Residential · Zwavelpoort</div>
+            <h3>Plot 412 Zwavelpoort</h3>
+            <p>Comfortable and convenient accommodation nestled in a tranquil setting — a welcoming retreat built to last.</p>
+            <a href="portfolio.html" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="project-card reveal" style="transition-delay:0.2s">
+          <div class="project-card-img">
+            <img src="yy.jpg" alt="422A Danie Theron Street" loading="lazy">
+          </div>
+          <div class="project-card-body">
+            <div class="project-cat">Residential · Pretoria North</div>
+            <h3>422A Danie Theron Street</h3>
+            <p>A cozy retreat nestled in the heart of the vibrant Pretoria community — built with precision and care.</p>
+            <a href="portfolio.html" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA BAND ═══════════════════════════════════════════════════ -->
+  <section id="cta">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="cta-text">
+          <div class="section-label">Start Today</div>
+          <h2>Ready to Build<br>Something Great?</h2>
+        </div>
+        <a href="tel:0795175383" class="btn-dark">Call 079 517 5383</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═════════════════════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">LEANO<span>TUMS</span></div>
+          <p>100% black-owned South African construction company delivering quality, innovation, and reliability on every project since 2019.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://web.facebook.com/profile.php?id=61552090770281" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/watch?v=3CRRqdf6Gn4" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.instagram.com/leanotumsprojects" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="#">Building Construction</a>
+          <a href="#">House Renovation</a>
+          <a href="#">Architecture Design</a>
+          <a href="#">Interior Design</a>
+          <a href="#">Painting</a>
+          <a href="#">Garden Services & Landscaping</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p><i class="fas fa-map-marker-alt"></i>417 Nimmersat Street, Gauteng</p>
+          <p><i class="fas fa-phone-alt"></i>079 517 5383</p>
+          <p><i class="fas fa-envelope"></i>Leanotumsprojects@gmail.com</p>
+          <p><i class="fas fa-clock"></i>Mon – Fri: 08:00 – 17:00</p>
+        </div>
+        <div class="footer-col">
+          <h4>Newsletter</h4>
+          <p>Stay updated with project highlights, industry trends, and exclusive insights from the Leanotums team.</p>
+          <div class="footer-newsletter" style="margin-top:16px">
+            <input type="email" placeholder="Your email address">
+            <button>Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Leanotums Projects (PTY) LTD. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Terms of Use</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-top" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script>
+    /* ════════════════════════════════════════════════════════════════
+       CURSOR
+    ════════════════════════════════════════════════════════════════ */
+    const dot = document.getElementById('cursor-dot');
+    const ring = document.getElementById('cursor-ring');
+    let mx = 0, my = 0, rx = 0, ry = 0;
+
+    document.addEventListener('mousemove', e => {
+      mx = e.clientX; my = e.clientY;
+      dot.style.left = mx + 'px'; dot.style.top = my + 'px';
+    });
+
+    function animRing() {
+      rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
+      ring.style.left = rx + 'px'; ring.style.top = ry + 'px';
+      requestAnimationFrame(animRing);
+    }
+    animRing();
+
+    document.querySelectorAll('a, button, .service-card, .faq-question, .feature-card').forEach(el => {
+      el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+      el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+    });
+
+    /* On mobile, hide cursor elements */
+    if ('ontouchstart' in window) {
+      dot.style.display = 'none'; ring.style.display = 'none';
+      document.body.style.cursor = 'auto';
+    }
+
+    /* ════════════════════════════════════════════════════════════════
+       SCROLL PROGRESS
+    ════════════════════════════════════════════════════════════════ */
+    const progress = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', () => {
+      const pct = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      progress.style.width = pct + '%';
+    }, { passive: true });
+
+    /* ════════════════════════════════════════════════════════════════
+       NAVBAR
+    ════════════════════════════════════════════════════════════════ */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    /* ════════════════════════════════════════════════════════════════
+       MOBILE MENU
+    ════════════════════════════════════════════════════════════════ */
+    const burger = document.getElementById('burger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    burger.addEventListener('click', () => {
+      burger.classList.toggle('active');
+      mobileMenu.classList.toggle('open');
+    });
+    document.querySelectorAll('.menu-link').forEach(link => {
+      link.addEventListener('click', () => {
+        burger.classList.remove('active');
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    /* ════════════════════════════════════════════════════════════════
+       HERO CANVAS PARTICLES
+    ════════════════════════════════════════════════════════════════ */
+    const canvas = document.getElementById('hero-canvas');
+    const ctx = canvas.getContext('2d');
+    let particles = [];
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    class Particle {
+      constructor() { this.reset(); }
+      reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random() * 1.5 + 0.3;
+        this.speed = Math.random() * 0.4 + 0.1;
+        this.opacity = Math.random() * 0.5 + 0.1;
+        this.vx = (Math.random() - 0.5) * 0.3;
+        this.vy = -this.speed;
+      }
+      update() {
+        this.x += this.vx; this.y += this.vy;
+        if (this.y < -10 || this.x < -10 || this.x > canvas.width + 10) this.reset();
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(95,158,160,${this.opacity})`;
+        ctx.fill();
+      }
+    }
+
+    for (let i = 0; i < 80; i++) particles.push(new Particle());
+
+    function animParticles() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      particles.forEach(p => { p.update(); p.draw(); });
+      requestAnimationFrame(animParticles);
+    }
+    animParticles();
+
+    /* ════════════════════════════════════════════════════════════════
+       REVEAL ON SCROLL
+    ════════════════════════════════════════════════════════════════ */
+    const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(el => revealObs.observe(el));
+
+    /* ════════════════════════════════════════════════════════════════
+       COUNTER ANIMATION
+    ════════════════════════════════════════════════════════════════ */
+    function animateCounter(el, target, duration = 2000) {
+      let start = 0;
+      const step = target / (duration / 16);
+      const run = () => {
+        start += step;
+        if (start >= target) { el.textContent = target; return; }
+        el.textContent = Math.floor(start);
+        requestAnimationFrame(run);
+      };
+      run();
+    }
+
+    const counters = document.querySelectorAll('.counter');
+    const counterObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting && !e.target.dataset.counted) {
+          e.target.dataset.counted = true;
+          animateCounter(e.target, parseInt(e.target.dataset.target));
+        }
+      });
+    }, { threshold: 0.4 });
+    counters.forEach(c => counterObs.observe(c));
+
+    /* ════════════════════════════════════════════════════════════════
+       FAQ ACCORDION
+    ════════════════════════════════════════════════════════════════ */
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const answer = item.querySelector('.faq-answer');
+        const isOpen = item.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-answer').style.maxHeight = null;
+        });
+
+        if (!isOpen) {
+          item.classList.add('open');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+
+    /* ════════════════════════════════════════════════════════════════
+       BACK TO TOP
+    ════════════════════════════════════════════════════════════════ */
+    const backTop = document.getElementById('back-top');
+    window.addEventListener('scroll', () => {
+      backTop.classList.toggle('show', window.scrollY > 500);
+    }, { passive: true });
+    backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    /* ════════════════════════════════════════════════════════════════
+       SMOOTH ANCHOR SCROLL
+    ════════════════════════════════════════════════════════════════ */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const offset = target.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({ top: offset, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
 </html>
