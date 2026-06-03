@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leanotums Projects | Build the Future</title>
   <meta name="description" content="Leanotums Projects (PTY) LTD — Your trusted construction company offering building, renovation, and project management services in Johannesburg & beyond.">
+  <meta property="og:title" content="Leanotums Projects | Build the Future">
+  <meta property="og:description" content="100% black-owned South African construction company delivering quality, innovation, and reliability on every project. Call 079 517 5383.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://leanotumsprojects.co.za">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#5F9EA0">
   <meta name="keywords" content="Construction, Builder, Building, Contractor, Johannesburg Construction, Gauteng Builders, Renovation, Architecture">
   <link rel="icon" href="favicon.ico">
 
@@ -1030,6 +1036,28 @@
       #back-top { bottom: 20px; right: 20px; }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Leanotums Projects (PTY) LTD",
+    "description": "100% black-owned South African construction company offering building construction, renovation, architecture design, interior design, painting, and landscaping services.",
+    "telephone": "+27795175383",
+    "email": "Leanotumsprojects@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "417 Nimmersat Street",
+      "addressRegion": "Gauteng",
+      "addressCountry": "ZA"
+    },
+    "openingHours": ["Mo-Fr 08:00-17:00"],
+    "url": "https://leanotumsprojects.co.za",
+    "sameAs": [
+      "https://web.facebook.com/profile.php?id=61552090770281",
+      "https://www.instagram.com/leanotumsprojects"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -1501,36 +1529,37 @@
           <div class="nav-logo">LEANO<span>TUMS</span></div>
           <p>100% black-owned South African construction company delivering quality, innovation, and reliability on every project since 2019.</p>
           <div class="footer-social">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="https://web.facebook.com/profile.php?id=61552090770281" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.youtube.com/watch?v=3CRRqdf6Gn4" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://www.instagram.com/leanotumsprojects" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://web.facebook.com/profile.php?id=61552090770281" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/leanotumsprojects" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/watch?v=3CRRqdf6Gn4" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/27795175383" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           </div>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
-          <a href="#">Building Construction</a>
-          <a href="#">House Renovation</a>
-          <a href="#">Architecture Design</a>
-          <a href="#">Interior Design</a>
-          <a href="#">Painting</a>
-          <a href="#">Garden Services & Landscaping</a>
+          <a href="service.html">Building Construction</a>
+          <a href="service.html">House Renovation</a>
+          <a href="service.html">Architecture Design</a>
+          <a href="service.html">Interior Design</a>
+          <a href="service.html">Painting</a>
+          <a href="service.html">Garden Services &amp; Landscaping</a>
         </div>
         <div class="footer-col">
           <h4>Contact</h4>
           <p><i class="fas fa-map-marker-alt"></i>417 Nimmersat Street, Gauteng</p>
-          <p><i class="fas fa-phone-alt"></i>079 517 5383</p>
-          <p><i class="fas fa-envelope"></i>Leanotumsprojects@gmail.com</p>
+          <p><i class="fas fa-phone-alt"></i><a href="tel:0795175383" style="color:inherit">079 517 5383</a></p>
+          <p><i class="fas fa-envelope"></i><a href="mailto:Leanotumsprojects@gmail.com" style="color:inherit">Leanotumsprojects@gmail.com</a></p>
           <p><i class="fas fa-clock"></i>Mon – Fri: 08:00 – 17:00</p>
         </div>
         <div class="footer-col">
           <h4>Newsletter</h4>
           <p>Stay updated with project highlights, industry trends, and exclusive insights from the Leanotums team.</p>
           <div class="footer-newsletter" style="margin-top:16px">
-            <input type="email" placeholder="Your email address">
-            <button>Subscribe</button>
+            <input type="email" id="newsletterEmail" placeholder="Your email address">
+            <button onclick="(function(){const e=document.getElementById('newsletterEmail');const m=document.getElementById('nMsg');if(!e.value||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.value)){m.style.color='#e05c5c';m.textContent='Please enter a valid email.';m.style.display='block';return;}m.style.color='var(--amber)';m.textContent='✓ Thank you for subscribing!';m.style.display='block';e.value='';})()">Subscribe</button>
           </div>
+          <div id="nMsg" style="display:none;margin-top:8px;font-size:13px"></div>
         </div>
       </div>
       <div class="footer-bottom">

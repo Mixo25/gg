@@ -50,3 +50,28 @@ if(backTop)backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:
 
 /* ═══ SMOOTH ANCHORS ═══════════════════════════════════════════ */
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-80,behavior:'smooth'});}});});
+
+/* ═══ WHATSAPP FLOAT BUTTON ════════════════════════════════════ */
+(function(){
+  const wa = document.createElement('a');
+  wa.href = 'https://wa.me/27795175383?text=Hi%20Leanotums%20Projects%2C%20I%27d%20like%20to%20enquire%20about%20a%20project.';
+  wa.target = '_blank';
+  wa.rel = 'noopener';
+  wa.setAttribute('aria-label','Chat on WhatsApp');
+  wa.style.cssText = 'position:fixed;bottom:88px;right:32px;z-index:4999;width:52px;height:52px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 4px 20px rgba(37,211,102,0.45);transition:transform 0.3s,box-shadow 0.3s;text-decoration:none;';
+  wa.innerHTML = '<i class="fab fa-whatsapp"></i>';
+  wa.addEventListener('mouseenter',()=>{wa.style.transform='scale(1.12)';wa.style.boxShadow='0 6px 28px rgba(37,211,102,0.6)';});
+  wa.addEventListener('mouseleave',()=>{wa.style.transform='scale(1)';wa.style.boxShadow='0 4px 20px rgba(37,211,102,0.45)';});
+  document.body.appendChild(wa);
+})();
+
+/* ═══ ACTIVE NAV LINK ══════════════════════════════════════════ */
+(function(){
+  const path = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    const href = a.getAttribute('href');
+    if(href && (href === path || (path === '' && href === 'index.html'))) {
+      a.classList.add('active');
+    }
+  });
+})();

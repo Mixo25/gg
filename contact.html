@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Leanotums Projects</title>
+  <title>Contact Us | Leanotums Projects</title>
+  <meta name="description" content="Get in touch with Leanotums Projects — Johannesburg's trusted construction company. Request a quote, ask a question, or discuss your next project.">
   <link rel="icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -11,27 +12,63 @@
   <style>
     .contact-grid { display:grid; grid-template-columns:1fr 1.4fr; gap:60px; align-items:start; }
     .contact-info-cards { display:flex; flex-direction:column; gap:2px; margin-top:40px; }
-    .contact-info-card { display:flex; align-items:center; gap:20px; padding:24px 28px; background:var(--bg3); border:1px solid var(--border); transition:border-color 0.3s; }
-    .contact-info-card:hover { border-color:rgba(95,158,160,0.4); }
+    .contact-info-card { display:flex; align-items:center; gap:20px; padding:24px 28px; background:var(--bg3); border:1px solid var(--border); transition:border-color 0.3s,background 0.3s; }
+    .contact-info-card:hover { border-color:rgba(95,158,160,0.4); background:rgba(95,158,160,0.03); }
     .contact-icon { width:52px; height:52px; flex-shrink:0; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; color:var(--teal); font-size:18px; transition:border-color 0.3s,box-shadow 0.3s; }
     .contact-info-card:hover .contact-icon { border-color:var(--teal); box-shadow:var(--glow-sm); }
     .contact-info-card h4 { font-family:var(--ff-head); font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--teal); margin-bottom:4px; }
     .contact-info-card p { font-size:15px; color:var(--text-dim); }
+    .contact-info-card a { color:var(--text-dim); transition:color 0.3s; }
+    .contact-info-card a:hover { color:var(--teal); }
     .hours-card { margin-top:2px; padding:28px; background:var(--bg3); border:1px solid var(--border); }
     .hours-card h4 { font-family:var(--ff-head); font-size:11px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--teal); margin-bottom:16px; }
     .hours-row { display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--border); }
     .hours-row:last-child { border-bottom:none; }
     .hours-row span:first-child { font-family:var(--ff-head); font-size:14px; font-weight:600; color:var(--text-dim); }
     .hours-row span:last-child { font-size:14px; color:var(--teal); }
+
+    /* Form */
     .contact-form-wrap { padding:48px; background:var(--bg3); border:1px solid var(--border); }
     .form-header { margin-bottom:36px; }
     .form-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
     .form-group { margin-bottom:16px; }
     .form-group label { display:block; font-family:var(--ff-head); font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--text-dim); margin-bottom:8px; }
-    .form-group input, .form-group textarea, .form-group select { width:100%; padding:14px 16px; background:var(--bg2); border:1px solid var(--border); color:var(--text); font-family:var(--ff-body); font-size:14px; outline:none; transition:border-color 0.3s; resize:vertical; }
-    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color:var(--teal); }
+    .form-group input, .form-group textarea, .form-group select {
+      width:100%; padding:14px 16px;
+      background:var(--bg2); border:1px solid var(--border);
+      color:var(--text); font-family:var(--ff-body); font-size:14px;
+      outline:none; transition:border-color 0.3s,box-shadow 0.3s; resize:vertical;
+      -webkit-appearance:none; border-radius:0;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color:var(--teal); box-shadow:0 0 0 3px rgba(95,158,160,0.1); }
+    .form-group input.error, .form-group textarea.error, .form-group select.error { border-color:#e05c5c; }
     .form-group textarea { min-height:140px; }
     .form-group select option { background:var(--bg3); }
+    .form-group select { appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235F9EA0' stroke-width='1.5' fill='none'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 16px center; padding-right:40px; }
+
+    .submit-btn {
+      width:100%; padding:18px; text-align:center;
+      font-family:var(--ff-head); font-size:13px; font-weight:700;
+      letter-spacing:3px; text-transform:uppercase;
+      background:var(--teal); color:var(--deep);
+      border:none; cursor:pointer;
+      clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px));
+      transition:box-shadow 0.3s,transform 0.2s,opacity 0.2s;
+      display:flex; align-items:center; justify-content:center; gap:10px;
+    }
+    .submit-btn:hover { box-shadow:var(--glow); transform:translateY(-2px); }
+    .submit-btn:disabled { opacity:0.6; cursor:not-allowed; transform:none; }
+
+    /* Status messages */
+    .form-status { display:none; padding:16px 20px; margin-top:16px; font-family:var(--ff-head); font-size:14px; font-weight:600; letter-spacing:1px; border:1px solid; }
+    .form-status.success { display:block; color:#4caf8a; border-color:rgba(76,175,138,0.3); background:rgba(76,175,138,0.06); }
+    .form-status.error { display:block; color:#e05c5c; border-color:rgba(224,92,92,0.3); background:rgba(224,92,92,0.06); }
+
+    /* Social quick links */
+    .contact-socials { display:flex; gap:10px; margin-top:2px; }
+    .contact-socials a { width:44px; height:44px; border:1px solid var(--border); display:flex; align-items:center; justify-content:center; color:var(--text-faint); font-size:15px; transition:border-color 0.3s,color 0.3s,background 0.3s; }
+    .contact-socials a:hover { border-color:var(--teal); color:var(--teal); background:rgba(95,158,160,0.06); }
+
     @media(max-width:900px){ .contact-grid{grid-template-columns:1fr;} .form-row{grid-template-columns:1fr;} }
     @media(max-width:640px){ .contact-form-wrap{padding:28px;} }
   </style>
@@ -39,15 +76,29 @@
 <body>
   <div id="cursor-dot"></div><div id="cursor-ring"></div>
   <div id="scroll-progress"></div>
+
   <nav id="navbar">
     <a href="index.html" class="nav-logo">LEANO<span>TUMS</span></a>
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="service.html">Services</a></li><li><a href="team.html">Team</a></li><li><a href="portfolio.html">Projects</a></li><li><a href="blog.html">Blog</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="team.html">Team</a></li>
+      <li><a href="portfolio.html">Projects</a></li>
+      <li><a href="blog.html">Blog</a></li>
     </ul>
     <a href="contact.html" class="nav-cta active" style="background:var(--teal);color:var(--deep)">Contact Us</a>
     <button class="nav-burger" id="burger"><span></span><span></span><span></span></button>
   </nav>
-  <div id="mobile-menu"><a href="index.html" class="menu-link">Home</a><a href="about.html" class="menu-link">About</a><a href="service.html" class="menu-link">Services</a><a href="team.html" class="menu-link">Team</a><a href="portfolio.html" class="menu-link">Projects</a><a href="contact.html" class="menu-link">Contact</a><p class="menu-contact">079 517 5383 · Johannesburg</p></div>
+  <div id="mobile-menu">
+    <a href="index.html" class="menu-link">Home</a>
+    <a href="about.html" class="menu-link">About</a>
+    <a href="service.html" class="menu-link">Services</a>
+    <a href="team.html" class="menu-link">Team</a>
+    <a href="portfolio.html" class="menu-link">Projects</a>
+    <a href="contact.html" class="menu-link">Contact</a>
+    <p class="menu-contact">079 517 5383 · Johannesburg</p>
+  </div>
 
   <div class="page-hero">
     <div class="page-hero-bg" style="background-image:url('66.jpg')"></div>
@@ -55,63 +106,334 @@
     <div class="container page-hero-content">
       <div class="page-hero-tag">Get In Touch</div>
       <h1><span>Contact</span> Us</h1>
-      <div class="breadcrumb-bar"><a href="index.html">Home</a><span>›</span><a href="contact.html">Contact</a></div>
+      <div class="breadcrumb-bar">
+        <a href="index.html">Home</a><span>›</span><a href="contact.html">Contact</a>
+      </div>
     </div>
   </div>
 
   <section style="background:var(--bg)">
     <div class="container">
       <div class="contact-grid">
+
+        <!-- LEFT: Info -->
         <div>
           <div class="section-label reveal">Reach Out</div>
           <h2 class="section-title reveal">Let's <span class="stroke">Talk</span></h2>
-          <p class="section-desc reveal">Have a project in mind or need a quote? Get in touch and our team will respond within 24 hours.</p>
+          <p class="section-desc reveal">Have a project in mind or need a quote? Send us a message and our team will respond within 24 hours.</p>
+
           <div class="contact-info-cards">
-            <div class="contact-info-card reveal"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div><h4>Location</h4><p>417 Nimmersat Street, Gauteng</p></div></div>
-            <div class="contact-info-card reveal" style="transition-delay:.1s"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><div><h4>Phone</h4><p>079 517 5383</p></div></div>
-            <div class="contact-info-card reveal" style="transition-delay:.2s"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div><h4>Email</h4><p>Leanotumsprojects@gmail.com</p></div></div>
+            <div class="contact-info-card reveal">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h4>Location</h4>
+                <p>417 Nimmersat Street, Gauteng, South Africa</p>
+              </div>
+            </div>
+            <div class="contact-info-card reveal" style="transition-delay:.1s">
+              <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+              <div>
+                <h4>Phone</h4>
+                <p><a href="tel:0795175383">079 517 5383</a></p>
+              </div>
+            </div>
+            <div class="contact-info-card reveal" style="transition-delay:.2s">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email</h4>
+                <p><a href="mailto:Leanotumsprojects@gmail.com">Leanotumsprojects@gmail.com</a></p>
+              </div>
+            </div>
           </div>
+
           <div class="hours-card reveal" style="transition-delay:.3s">
             <h4>Office Hours</h4>
             <div class="hours-row"><span>Monday – Friday</span><span>08:00 – 17:00</span></div>
             <div class="hours-row"><span>Saturday</span><span>By Appointment</span></div>
             <div class="hours-row"><span>Sunday</span><span>Closed</span></div>
           </div>
+
+          <div class="contact-socials reveal" style="transition-delay:.4s">
+            <a href="https://web.facebook.com/profile.php?id=61552090770281" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/leanotumsprojects" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/watch?v=3CRRqdf6Gn4" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.linkedin.com/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://wa.me/27795175383" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+
         </div>
+
+        <!-- RIGHT: Form — emails go directly to leanotumsprojects@gmail.com via Formspree -->
         <div class="contact-form-wrap reveal-right">
           <div class="form-header">
             <div class="section-label">Send A Message</div>
             <h3 style="font-family:var(--ff-display);font-size:36px;letter-spacing:2px">For Any <span style="color:var(--teal)">Query</span></h3>
+            <p style="font-size:14px;color:var(--text-dim);margin-top:8px">All fields marked are required. We respond within 24 business hours.</p>
           </div>
-          <form>
+
+          <!--
+            HOW THIS FORM WORKS:
+            ─────────────────────────────────────────────────────────
+            This form uses Formspree (formspree.io) — a free service
+            that forwards submissions straight to your Gmail inbox.
+
+            SETUP STEPS (one-time, takes 2 minutes):
+            1. Go to https://formspree.io and sign up (free)
+            2. Click "New Form", name it "Leanotums Contact"
+            3. Copy your unique form ID (looks like: xpzgkwqr)
+            4. Replace YOUR_FORMSPREE_ID below with that ID
+            5. Done — messages will arrive at leanotumsprojects@gmail.com
+
+            No server, no PHP, no backend needed.
+            ─────────────────────────────────────────────────────────
+          -->
+          <form id="contactForm"
+                action="https://formspree.io/f/xykaglnv"
+                method="POST"
+                novalidate>
+
+            <!-- Hidden fields that help you identify and reply -->
+            <input type="hidden" name="_subject" value="New Project Enquiry — Leanotums Projects Website">
+            <input type="hidden" name="_next" value="">
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
             <div class="form-row">
-              <div class="form-group"><label>Your Name</label><input type="text" placeholder="e.g. John Smith"></div>
-              <div class="form-group"><label>Your Email</label><input type="email" placeholder="e.g. john@email.com"></div>
+              <div class="form-group">
+                <label for="name">Your Name <span style="color:var(--teal)">*</span></label>
+                <input type="text" id="name" name="name" placeholder="e.g. John Smith" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="email">Your Email <span style="color:var(--teal)">*</span></label>
+                <input type="email" id="email" name="email" placeholder="e.g. john@email.com" required autocomplete="email">
+              </div>
             </div>
-            <div class="form-group"><label>Phone Number</label><input type="tel" placeholder="e.g. 079 000 0000"></div>
-            <div class="form-group"><label>Service Required</label>
-              <select><option value="">Select a service...</option><option>Building Construction</option><option>House Renovation</option><option>Architecture Design</option><option>Interior Design</option><option>Fixing & Support</option><option>Painting</option><option>Garden Services & Landscaping</option><option>Other</option></select>
+
+            <div class="form-group">
+              <label for="phone">Phone Number <span style="color:var(--teal)">*</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="e.g. 079 000 0000" required autocomplete="tel">
             </div>
-            <div class="form-group"><label>Your Message</label><textarea placeholder="Tell us about your project..."></textarea></div>
-            <button type="submit" class="btn-primary" style="width:100%;text-align:center">Send Message</button>
+
+            <div class="form-group">
+              <label for="service">Service Required <span style="color:var(--teal)">*</span></label>
+              <select id="service" name="service" required>
+                <option value="">Select a service...</option>
+                <option>Building Construction</option>
+                <option>House Renovation</option>
+                <option>Architecture Design</option>
+                <option>Interior Design</option>
+                <option>Fixing &amp; Support</option>
+                <option>Painting</option>
+                <option>Garden Services &amp; Landscaping</option>
+                <option>Project Management</option>
+                <option>Other / General Enquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="budget">Estimated Budget (Optional)</label>
+              <select id="budget" name="budget">
+                <option value="">Prefer not to say</option>
+                <option>Under R50,000</option>
+                <option>R50,000 – R150,000</option>
+                <option>R150,000 – R500,000</option>
+                <option>R500,000 – R1,000,000</option>
+                <option>Over R1,000,000</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Your Message <span style="color:var(--teal)">*</span></label>
+              <textarea id="message" name="message" placeholder="Tell us about your project — location, scope, timeline, any specific requirements..." required></textarea>
+            </div>
+
+            <div class="form-group" style="display:flex;align-items:flex-start;gap:12px;margin-bottom:20px">
+              <input type="checkbox" id="consent" name="consent" required style="width:auto;margin-top:3px;accent-color:var(--teal)">
+              <label for="consent" style="font-size:13px;color:var(--text-dim);letter-spacing:0;text-transform:none;font-family:var(--ff-body)">
+                I agree to Leanotums Projects contacting me regarding my enquiry. My information will not be shared with third parties.
+              </label>
+            </div>
+
+            <button type="submit" class="submit-btn" id="submitBtn">
+              <i class="fas fa-paper-plane"></i>
+              <span id="btnText">Send Message</span>
+            </button>
+
+            <div class="form-status" id="formSuccess">
+              <i class="fas fa-check-circle" style="margin-right:8px"></i>
+              Thank you! Your message has been sent. We'll be in touch within 24 hours.
+            </div>
+            <div class="form-status" id="formError">
+              <i class="fas fa-exclamation-triangle" style="margin-right:8px"></i>
+              <span id="errorMsg">Something went wrong. Please try again or call us directly on 079 517 5383.</span>
+            </div>
           </form>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="cta-band"><div class="container"><div class="cta-inner"><div class="cta-text"><div class="section-label">Call Direct</div><h2>Speak to the<br>Team Now</h2></div><a href="tel:0795175383" class="btn-dark">079 517 5383</a></div></div></section>
+  <section class="cta-band">
+    <div class="container">
+      <div class="cta-inner">
+        <div class="cta-text">
+          <div class="section-label">Call Direct</div>
+          <h2>Speak to the<br>Team Now</h2>
+        </div>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+          <a href="tel:0795175383" class="btn-dark"><i class="fas fa-phone" style="margin-right:8px"></i>079 517 5383</a>
+          <a href="https://wa.me/27795175383" target="_blank" class="btn-dark" style="background:transparent;border-color:var(--deep)"><i class="fab fa-whatsapp" style="margin-right:8px"></i>WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer id="footer"><div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><div class="nav-logo">LEANO<span>TUMS</span></div><p>100% black-owned South African construction company delivering quality and reliability on every project.</p><div class="footer-social"><a href="#"><i class="fab fa-twitter"></i></a><a href="https://web.facebook.com/profile.php?id=61552090770281" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="https://www.youtube.com/watch?v=3CRRqdf6Gn4" target="_blank"><i class="fab fa-youtube"></i></a><a href="https://www.instagram.com/leanotumsprojects" target="_blank"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-linkedin-in"></i></a></div></div>
-      <div class="footer-col"><h4>Services</h4><a href="service.html">Building Construction</a><a href="service.html">House Renovation</a><a href="service.html">Architecture Design</a><a href="service.html">Interior Design</a><a href="service.html">Painting</a><a href="service.html">Garden Services & Landscaping</a></div>
-      <div class="footer-col"><h4>Contact</h4><p><i class="fas fa-map-marker-alt"></i>417 Nimmersat Street, Gauteng</p><p><i class="fas fa-phone-alt"></i>079 517 5383</p><p><i class="fas fa-envelope"></i>Leanotumsprojects@gmail.com</p><p><i class="fas fa-clock"></i>Mon – Fri: 08:00 – 17:00</p></div>
-      <div class="footer-col"><h4>Newsletter</h4><p>Stay updated with project highlights and insights from our team.</p><div class="footer-newsletter" style="margin-top:16px"><input type="email" placeholder="Your email address"><button>Subscribe</button></div></div>
+      <div class="footer-brand">
+        <div class="nav-logo">LEANO<span>TUMS</span></div>
+        <p>100% black-owned South African construction company delivering quality and reliability on every project.</p>
+        <div class="footer-social">
+          <a href="https://web.facebook.com/profile.php?id=61552090770281" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/leanotumsprojects" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.youtube.com/watch?v=3CRRqdf6Gn4" target="_blank"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/27795175383" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Services</h4>
+        <a href="service.html">Building Construction</a><a href="service.html">House Renovation</a>
+        <a href="service.html">Architecture Design</a><a href="service.html">Interior Design</a>
+        <a href="service.html">Painting</a><a href="service.html">Garden Services &amp; Landscaping</a>
+      </div>
+      <div class="footer-col"><h4>Contact</h4>
+        <p><i class="fas fa-map-marker-alt"></i>417 Nimmersat Street, Gauteng</p>
+        <p><i class="fas fa-phone-alt"></i><a href="tel:0795175383" style="color:inherit">079 517 5383</a></p>
+        <p><i class="fas fa-envelope"></i><a href="mailto:Leanotumsprojects@gmail.com" style="color:inherit">Leanotumsprojects@gmail.com</a></p>
+        <p><i class="fas fa-clock"></i>Mon – Fri: 08:00 – 17:00</p>
+        <p><i class="fab fa-whatsapp"></i><a href="https://wa.me/27795175383" target="_blank" style="color:inherit">WhatsApp Us</a></p>
+      </div>
+      <div class="footer-col"><h4>Newsletter</h4>
+        <p>Stay updated with project highlights and insights from our team.</p>
+        <div class="footer-newsletter" style="margin-top:16px">
+          <input type="email" id="newsletterEmail" placeholder="Your email address">
+          <button onclick="subscribeNewsletter()">Subscribe</button>
+        </div>
+        <div id="newsletterMsg" style="display:none;margin-top:8px;font-size:13px;color:var(--teal)"></div>
+      </div>
     </div>
-    <div class="footer-bottom"><p>&copy; 2025 Leanotums Projects (PTY) LTD. All rights reserved.</p><div class="footer-bottom-links"><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Cookies</a></div></div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Leanotums Projects (PTY) LTD. All rights reserved.</p>
+      <div class="footer-bottom-links"><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Cookies</a></div>
+    </div>
   </div></footer>
+
   <button id="back-top"><i class="fas fa-chevron-up"></i></button>
   <script src="shared.js"></script>
+  <script>
+  /* ═══ CONTACT FORM — FORMSPREE SUBMISSION ═══ */
+  const form = document.getElementById('contactForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const btnText = document.getElementById('btnText');
+  const successMsg = document.getElementById('formSuccess');
+  const errorMsg2 = document.getElementById('formError');
+  const errTxt = document.getElementById('errorMsg');
+
+  function validateForm() {
+    let valid = true;
+    const required = form.querySelectorAll('[required]');
+    required.forEach(field => {
+      field.classList.remove('error');
+      if (field.type === 'checkbox') {
+        if (!field.checked) { field.style.outline = '2px solid #e05c5c'; valid = false; }
+        else { field.style.outline = ''; }
+      } else if (!field.value.trim()) {
+        field.classList.add('error'); valid = false;
+      }
+    });
+    // Email format check
+    const emailField = document.getElementById('email');
+    if (emailField.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)) {
+      emailField.classList.add('error'); valid = false;
+    }
+    return valid;
+  }
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    successMsg.style.display = 'none';
+    errorMsg2.style.display = 'none';
+
+    if (!validateForm()) {
+      errTxt.textContent = 'Please fill in all required fields correctly.';
+      errorMsg2.style.display = 'block';
+      errorMsg2.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      return;
+    }
+
+    // Check if Formspree ID has been set
+    if (form.action.includes('YOUR_FORMSPREE_ID')) {
+      // Dev mode: show instructions
+      errTxt.innerHTML = 'To activate email delivery: visit <strong>formspree.io</strong>, create a free account, create a new form, and replace YOUR_FORMSPREE_ID in contact.html with your form ID.';
+      errorMsg2.style.display = 'block';
+      return;
+    }
+
+    submitBtn.disabled = true;
+    btnText.textContent = 'Sending…';
+    submitBtn.querySelector('i').className = 'fas fa-spinner fa-spin';
+
+    try {
+      const data = new FormData(form);
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        form.reset();
+        successMsg.style.display = 'block';
+        successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        submitBtn.disabled = false;
+        btnText.textContent = 'Send Message';
+        submitBtn.querySelector('i').className = 'fas fa-paper-plane';
+      } else {
+        const res = await response.json();
+        if (res.errors) {
+          errTxt.textContent = res.errors.map(e => e.message).join(', ');
+        } else {
+          errTxt.textContent = 'Something went wrong. Please call us on 079 517 5383.';
+        }
+        throw new Error('Formspree error');
+      }
+    } catch(err) {
+      errorMsg2.style.display = 'block';
+      submitBtn.disabled = false;
+      btnText.textContent = 'Send Message';
+      submitBtn.querySelector('i').className = 'fas fa-paper-plane';
+    }
+  });
+
+  // Clear error styling on input
+  form.querySelectorAll('input, textarea, select').forEach(field => {
+    field.addEventListener('input', () => field.classList.remove('error'));
+  });
+
+  /* Newsletter */
+  function subscribeNewsletter() {
+    const email = document.getElementById('newsletterEmail').value.trim();
+    const msg = document.getElementById('newsletterMsg');
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      msg.style.color = '#e05c5c';
+      msg.textContent = 'Please enter a valid email address.';
+      msg.style.display = 'block';
+      return;
+    }
+    msg.style.color = 'var(--teal)';
+    msg.textContent = '✓ Subscribed! Thank you for joining.';
+    msg.style.display = 'block';
+    document.getElementById('newsletterEmail').value = '';
+  }
+  </script>
 </body>
 </html>
